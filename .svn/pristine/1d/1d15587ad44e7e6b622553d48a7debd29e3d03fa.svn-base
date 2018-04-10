@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="84dp"
+        android:background="@color/white"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:orientation="vertical">
+        <!-- 门店平均分 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="门店平均分"
+                android:textColor="@color/text_black"
+                android:textSize="13sp" />
+
+            <!-- 评分 -->
+            <com.xi6666.store.custom.EvaluateBar
+                android:id="@+id/owner_evaluation_type_fen_eb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:starCount="5"
+                app:starDistance="4dp"
+                app:starEmpty="@mipmap/ic_score_star_select"
+                app:starFill="@mipmap/ic_score_star_selected"
+                app:starMark="0"
+                app:starSize="18dp"
+                app:touch="false" />
+
+            <!-- 分数 -->
+            <TextView
+                android:id="@+id/owner_evaluation_type_fen_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:text="0.0分"
+                android:textColor="@color/text_orange"
+                android:textSize="17sp" />
+
+
+            <!-- 评价 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:visibility="gone"
+                android:layout_alignParentBottom="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- 分割线 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray"/>
+
+        <!-- 评价 -->
+        <com.xi6666.view.custom.EvaluationTypeView
+            android:id="@+id/owner_evaluation_type_etv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+
+    <!-- 评论列表 -->
+    <com.xi6666.view.superrecyclerview.XRecyclerView
+        android:id="@+id/owner_evaluation_evaluation_xrv"
+        android:layout_width="match_parent"
+        android:visibility="visible"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/owner_evaluation_evaluation_not_ll"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_owner_evaluation_not"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:text="暂无评价记录\n你来成为第一个评价的人吧!"/>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

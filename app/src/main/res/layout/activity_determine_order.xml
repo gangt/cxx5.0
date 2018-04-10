@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@mipmap/bg_determine_order">
+
+
+        <!-- 服务名称 -->
+        <TextView
+            android:id="@+id/determine_order_server_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:ellipsize="end"
+            android:maxLength="13"
+            android:maxLines="1"
+            android:textColor="@color/text_black"
+            android:textSize="17sp" />
+
+        <!-- 店名-->
+        <TextView
+            android:id="@+id/determine_order_shop_title_tv"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/determine_order_server_title_tv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="7dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:lines="2" />
+
+        <!-- 订单信息 -->
+        <TextView
+            android:id="@+id/determine_order_order_details_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/determine_order_shop_title_tv"
+            android:layout_marginLeft="42dp"
+            android:layout_marginTop="30dp"
+            android:text="订单信息"
+            android:textColor="@color/text_black"
+            android:textSize="17sp" />
+
+
+        <!-- 订单number -->
+        <TextView
+            android:id="@+id/determine_order_order_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/determine_order_order_details_tv"
+            android:layout_below="@+id/determine_order_order_details_tv"
+            android:layout_marginTop="19dp"
+            android:text="订单编号"
+            android:textColor="@color/text_black"
+            android:textSize="13sp" />
+
+        <!-- 订单编号 -->
+        <TextView
+            android:id="@+id/determine_order_order_number_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/determine_order_order_number"
+            android:layout_marginLeft="42dp"
+            android:layout_toRightOf="@+id/determine_order_order_number"
+            android:textColor="@color/text_black"
+            android:textSize="13sp" />
+
+
+        <!-- 下单时间 -->
+        <TextView
+            android:id="@+id/determine_order_order_time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/determine_order_order_number_tv"
+            android:layout_below="@+id/determine_order_order_number_tv"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/text_black"
+            android:textSize="13sp" />
+
+        <!-- 订单类型 -->
+        <TextView
+            android:id="@+id/determine_order_order_type_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/determine_order_order_time_tv"
+            android:layout_below="@+id/determine_order_order_time_tv"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:maxLength="13"
+            android:maxLines="1"
+            android:textColor="@color/text_black"
+            android:textSize="13sp" />
+
+        <!-- 价格 -->
+        <TextView
+            android:id="@+id/determine_order_order_moeny_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/determine_order_order_type_tv"
+            android:layout_below="@+id/determine_order_order_type_tv"
+            android:layout_marginTop="10dp"
+            android:textColor="#f53825"
+            android:textSize="17sp" />
+
+
+        <!-- 提示文字 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/determine_order_order_number"
+            android:layout_alignTop="@+id/determine_order_order_time_tv"
+            android:layout_toLeftOf="@+id/determine_order_order_time_tv"
+            android:text="下单时间"
+            android:textColor="@color/text_black"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/determine_order_order_number"
+            android:layout_alignTop="@+id/determine_order_order_type_tv"
+            android:layout_toLeftOf="@+id/determine_order_order_type_tv"
+            android:text="订单类型"
+            android:textColor="@color/text_black"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/determine_order_order_number"
+            android:layout_alignRight="@+id/determine_order_order_number"
+            android:layout_alignTop="@+id/determine_order_order_moeny_tv"
+            android:layout_toLeftOf="@+id/determine_order_order_moeny_tv">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="共"
+                android:textColor="@color/text_black"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="计"
+                android:textColor="@color/text_black"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <com.xi6666.carWash.view.custom.BottomMoenyView
+        android:id="@+id/determine_order_pay"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

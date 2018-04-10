@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="110dp"
+        android:layout_height="62dp"
+        >
+
+        <RelativeLayout
+            android:id="@+id/item_addoillist_package"
+            android:layout_width="96dp"
+            android:layout_height="48dp">
+
+            <RelativeLayout
+                android:id="@+id/item_addoillist_bg"
+                android:layout_width="96dp"
+                android:layout_height="48dp">
+
+
+                <com.xi6666.view.LeanTextView
+                    android:id="@+id/ltv_package_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="二周年庆"
+                    android:textColor="#fc3e38"
+                    android:textSize="7sp"
+                    android:visibility="gone"
+                    app:degree="-45px"/>
+
+                <TextView
+                    android:id="@+id/item_addoillist_zhe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:text="折扣"
+                    android:textColor="@color/txtMineOrderTitle"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/item_addoillist_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/item_addoillist_zhe"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="3dp"
+                    android:text="折扣"
+                    android:textColor="@color/addOillight"
+                    android:textSize="11sp"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

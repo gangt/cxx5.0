@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/activity_splash"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="com.xi6666.splash.view.SplashAct">
+
+    <Button
+        android:id="@+id/btn_splash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="跳过"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/iv_welcome_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/txt_splash_version"
+        android:layout_marginLeft="78dp"
+        android:layout_marginStart="78dp"
+        android:layout_toEndOf="@+id/btn_splash"
+        android:layout_toRightOf="@+id/btn_splash"
+        android:src="@drawable/ic_welcome_logo"/>
+
+    <TextView
+        android:id="@+id/txt_splash_countdowntime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="5"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/txt_splash_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:layout_marginLeft="9dp"
+        android:layout_toRightOf="@id/iv_welcome_logo"
+        android:drawableLeft="@drawable/ic_welcome_title"
+        android:drawablePadding="4dp"
+        android:text=""
+        android:textColor="#14CC70"
+        android:textSize="15sp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="9dp"
+        android:layout_toRightOf="@id/iv_welcome_logo"
+        android:drawablePadding="4dp"
+        android:text="车 主 车 生 活 一 体 化 服 务 平 台"
+        android:textColor="@color/homeAddressTxtColor"
+        android:textSize="11sp"
+        />
+
+</RelativeLayout>

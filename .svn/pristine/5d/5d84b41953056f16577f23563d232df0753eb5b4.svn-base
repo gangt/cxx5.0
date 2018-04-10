@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/activity_happy_beans"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/divColor"
+    android:orientation="vertical"
+    tools:context="com.xi6666.happybeans.view.HappyBeansAct">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="139dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="19dp"
+            android:background="@drawable/bg_happybeans_num">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="18dp"
+                android:text="喜豆"
+                android:textColor="@android:color/white"
+                android:textSize="13sp"/>
+
+            <com.xi6666.view.RandomTextView
+                android:id="@+id/txt_happybeans_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="38dp"
+                android:text="0"
+                android:textColor="@android:color/white"
+                android:textSize="23sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="46dp"
+                android:layout_toRightOf="@id/txt_happybeans_num"
+                android:text="个"
+                android:textColor="@android:color/white"
+                android:textSize="13sp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="19dp"
+            android:background="@drawable/bg_happybeans_persion">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="18dp"
+                android:text="推荐人数"
+                android:textColor="@android:color/white"
+                android:textSize="13sp"/>
+
+            <com.xi6666.view.RandomTextView
+                android:id="@+id/txt_happybeans_persion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="38dp"
+                android:text="0"
+                android:textColor="@android:color/white"
+                android:textSize="23sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="46dp"
+                android:layout_toRightOf="@id/txt_happybeans_persion"
+                android:text="个"
+                android:textColor="@android:color/white"
+                android:textSize="13sp"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@android:color/white">
+
+        <TextView
+            android:id="@+id/txt_happybeans_sort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:text="收支明细"
+            android:textColor="@color/txtSettingVersion"
+            android:textSize="13sp"/>
+
+        <RadioGroup
+            android:id="@+id/rg_happybeans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/txt_happybeans_sort"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/txt_happybeans_all"
+                android:layout_width="54dp"
+                android:layout_height="23dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@id/txt_happybeans_sort"
+                android:background="@drawable/selector_bg_hannpebean"
+                android:button="@null"
+                android:gravity="center"
+                android:text="综合"
+                android:textColor="@drawable/selector_txt_happybeans"
+                android:textSize="13sp"/>
+
+            <RadioButton
+                android:id="@+id/txt_happybeans_get"
+                android:layout_width="54dp"
+                android:layout_height="23dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@id/txt_happybeans_all"
+                android:background="@drawable/selector_bg_hannpebean"
+                android:button="@null"
+                android:gravity="center"
+                android:text="收入"
+                android:textColor="@drawable/selector_txt_happybeans"
+                android:textSize="13sp"/>
+
+            <RadioButton
+                android:id="@+id/txt_happybeans_set"
+                android:layout_width="54dp"
+                android:layout_height="23dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@id/txt_happybeans_get"
+                android:background="@drawable/selector_bg_hannpebean"
+                android:button="@null"
+                android:gravity="center"
+                android:text="支出"
+                android:textColor="@drawable/selector_txt_happybeans"
+                android:textSize="13sp"/>
+        </RadioGroup>
+    </RelativeLayout>
+
+    <com.xi6666.view.EmptyLayout
+        android:id="@+id/el_happybeans"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.xi6666.view.superrecyclerview.XRecyclerView
+            android:id="@+id/xrv_happybeans"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"/>
+
+    </com.xi6666.view.EmptyLayout>
+
+
+</LinearLayout>

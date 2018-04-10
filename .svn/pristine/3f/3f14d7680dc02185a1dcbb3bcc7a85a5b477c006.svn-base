@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="168dp"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <!-- 内容 -->
+        <RelativeLayout
+            android:layout_width="345dp"
+            android:layout_height="165dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="2.5dp"
+            android:layout_marginTop="3dp"
+            android:background="@mipmap/bg_store_view"
+            android:paddingLeft="10dp"
+            android:paddingTop="8dp">
+
+            <!-- 门店头像 -->
+            <ImageView
+                android:id="@+id/store_iv"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@color/gray" />
+
+            <!-- 门店标题 -->
+            <TextView
+                android:id="@+id/store_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="3dp"
+                android:layout_toLeftOf="@+id/store_jump_iv"
+                android:layout_toRightOf="@+id/store_iv"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text=""
+                android:textColor="#121212"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <!-- 定位 -->
+            <TextView
+                android:id="@+id/store_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/store_title"
+                android:layout_below="@+id/store_title"
+                android:layout_marginTop="7dp"
+                android:drawableLeft="@mipmap/ic_location_gary"
+                android:drawablePadding="3dp"
+                android:text="6.3km"
+                android:textColor="#929292"
+                android:textSize="13sp" />
+
+
+            <!-- 时间 -->
+            <TextView
+                android:id="@+id/store_time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:layout_alignLeft="@+id/store_location"
+                android:layout_below="@+id/store_address"
+                android:layout_marginTop="15dp"
+                android:background="@mipmap/bg_store_time"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textAlignment="center"
+                android:textColor="#888888"
+                android:textSize="11sp" />
+
+            <!-- 超速代办-->
+            <TextView
+                android:id="@+id/store_item_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:ellipsize="end"
+                android:lines="1"
+                android:maxEms="10"
+                android:paddingBottom="25dp"
+                android:text="超速代办超速代办"
+                android:textColor="#888888"
+                android:textSize="14sp" />
+
+
+            <!-- 条目 -->
+            <TextView
+                android:id="@+id/store_go_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="15dp"
+                android:layout_marginRight="10dp"
+                android:background="@mipmap/bg_btn_green"
+                android:gravity="center"
+                android:text="去支付"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+
+            <!-- 价格 -->
+            <TextView
+                android:id="@+id/store_moeny_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/store_item_title"
+                android:layout_alignBottom="@+id/store_item_title"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/store_item_title"
+                android:text="¥ 30.00"
+                android:textColor="#F53825" />
+
+            <!-- 跳转 -->
+            <ImageView
+                android:id="@+id/store_jump_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/store_score_tv"
+                android:layout_marginRight="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:src="@mipmap/ic_jusp_gray" />
+
+            <!-- 评分 -->
+            <TextView
+                android:id="@+id/store_score_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/store_iv"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="-3dp"
+                android:layout_marginRight="8dp"
+                android:text="4.9分"
+                android:textColor="#ff7f00"
+                android:textSize="15sp" />
+
+            <!-- 地址 -->
+            <TextView
+                android:id="@+id/store_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/store_location"
+                android:layout_alignBottom="@+id/store_location"
+                android:layout_marginLeft="12dp"
+                android:layout_toLeftOf="@+id/store_score_tv"
+                android:layout_toRightOf="@+id/store_location"
+                android:gravity="left"
+                android:layout_marginRight="10dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="#929292"
+                android:textSize="13sp" />
+
+        </RelativeLayout>
+
+        <!-- 我去过 -->
+        <ImageView
+            android:id="@+id/view_store_me_go_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_store_mego" />
+    </RelativeLayout>
+
+</RelativeLayout>

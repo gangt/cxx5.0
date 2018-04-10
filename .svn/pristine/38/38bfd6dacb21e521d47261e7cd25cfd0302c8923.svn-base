@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_coupon_list">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="22dp"
+            android:layout_marginTop="15dp"
+            android:text="¥"
+            android:textColor="@android:color/white"
+            android:textSize="17sp"/>
+
+        <TextView
+            android:id="@+id/txt_coupon_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="10dp"
+            android:text="0"
+            android:textColor="@android:color/white"
+            android:textSize="40sp"/>
+
+        <TextView
+            android:id="@+id/txt_coupon_canuse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_coupon_money"
+            android:layout_marginLeft="25dp"
+            android:text="0"
+            android:textColor="@android:color/white"
+            android:textSize="11sp"/>
+
+        <TextView
+            android:id="@+id/ic_coupon_list_dai"
+
+            android:layout_width="wrap_content"
+            android:layout_height="17dp"
+            android:layout_marginLeft="141dp"
+            android:layout_marginTop="12dp"
+
+            android:gravity="center"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+
+            android:textColor="@android:color/white"
+            android:textSize="10sp"
+            />
+
+        <TextView
+            android:id="@+id/txt_coupon_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/ic_coupon_list_dai"
+            android:text="name"
+            android:textColor="@color/txtSettingVersion"
+            android:textSize="15sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/txt_coupon_use"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ic_coupon_list_dai"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/ic_coupon_list_dai"
+            android:text="使用"
+            android:textColor="@color/txtMineOrderDefault"
+            android:textSize="10sp"/>
+
+        <TextView
+            android:id="@+id/txt_coupon_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_coupon_use"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/ic_coupon_list_dai"
+            android:text="日期"
+            android:textColor="@color/txtMineOrderDefault"
+            android:textSize="9sp"/>
+
+        <ImageView
+            android:id="@+id/iv_coupon_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_addoil_overdue"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/txt_coupon_gouse"
+            android:layout_width="54dp"
+            android:layout_height="21dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="17dp"
+            android:background="@drawable/bg_coupon_type"
+            android:gravity="center"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:text="去使用"
+            android:textColor="@android:color/white"
+            android:textSize="10sp"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+</RelativeLayout>

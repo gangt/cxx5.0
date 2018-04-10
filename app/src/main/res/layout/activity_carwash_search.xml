@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 搜索 -->
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="23dp"
+        android:text="历史搜索" />
+
+
+    <!-- 有搜索记录 -->
+    <ScrollView
+        android:id="@+id/carWash_history_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <com.xi6666.classification.view.custom.BaseListView
+                android:id="@+id/carWash_history_lv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/gray"
+                android:dividerHeight="1px" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/gray" />
+
+            <TextView
+                android:id="@+id/carWash_clear_history_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:paddingBottom="32dp"
+                android:paddingTop="44dp"
+                android:text="清除记录" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- 没有搜索记录 -->
+    <LinearLayout
+        android:id="@+id/carWash_history_nil_ll"
+        android:layout_width="match_parent"
+        android:layout_height="151dp"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="没有搜索记录"
+            android:textColor="#b2b2b2"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

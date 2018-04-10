@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- 有加油卡 -->
+        <in.srain.cube.views.ptr.PtrFrameLayout
+            android:id="@+id/oil_card_rfl"
+            android:layout_width="match_parent"
+            android:background="@color/gray"
+            android:layout_height="match_parent">
+            <com.xi6666.view.superrecyclerview.XRecyclerView
+                android:id="@+id/oil_card_xrv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </in.srain.cube.views.ptr.PtrFrameLayout>
+
+
+        <!--  没有加油卡 -->
+        <LinearLayout
+            android:id="@+id/oil_card_not_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="70dp"
+                android:visibility="gone"
+                android:src="@mipmap/ic_oil_card_not" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="180dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/oil_card_error"
+                    android:text="您还未添加加油卡,"
+                    android:textColor="#cccccc"
+                    android:textSize="15sp"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/oil_card_error"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="如何办理油卡?"
+                    android:textColor="@color/text_green"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <View
+        style="@style/horizontal_view"
+        android:background="@color/gray" />
+
+    <Button
+        android:id="@+id/oil_card_add_btn"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_gravity="center"
+        android:background="@color/text_green"
+        android:text="添加油卡"
+        android:textColor="@color/whiteTextColor"
+        android:textSize="17sp" />
+
+</LinearLayout>

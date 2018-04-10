@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:id="@+id/ll_main"
+                android:background="@color/alpha_red_text"
+                android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/activity_main"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.xi6666.MainActivity">
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.xi6666.view.CompatToolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/homeToolBarColor"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="11dp"
+                        android:drawableRight="@drawable/home_address_arrow"
+                        android:gravity="center_vertical"
+                        android:text="未知"
+                        android:textColor="@color/homeAddressTxtColor"
+                        android:textSize="13sp"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/home_toolbar_title"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="11dp"
+                        android:src="@drawable/home_add_car"/>
+                </com.xi6666.view.CompatToolbar>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/tl_pass"
+                    android:layout_width="match_parent"
+                    android:textColorHint="@color/txxtSettingSingout"
+                    android:layout_height="45dp"
+                    android:layout_margin="20dp">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="19dp"
+                        android:layout_marginRight="17dp"
+                        android:background="@null"
+                        android:hint="请输入你的手机号码"
+                        android:inputType="number"
+                        android:maxLength="11"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="#80ffffff"
+                        android:textCursorDrawable="@null"
+                        android:textSize="15sp"/>
+                </android.support.design.widget.TextInputLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_main_net"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="网络层框架测试"/>
+
+                    <Button
+                        android:id="@+id/btn_main_alipay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="支付宝"/>
+
+                    <Button
+                        android:id="@+id/btn_mian_wechat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="微信支付"/>
+
+                    <Button
+                        android:id="@+id/btn_mian_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="百度地位"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+                    <Button
+                        android:id="@+id/btn_main_map"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="百度地图"/>
+
+                    <Button
+                        android:id="@+id/btn_main_error"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="错误抓取"/>
+
+                    <Button
+                        android:id="@+id/btn_main_isdebug"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="判断是否是debug包"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_mian_gotonext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="去第二个界面"/>
+
+                    <Button
+                        android:id="@+id/btn_main_screen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="获取屏幕相关信息"/>
+
+                    <Button
+                        android:id="@+id/btn_main_pic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="加载图片"/>
+
+                </LinearLayout>
+
+                <com.xi6666.view.RandomTextView
+                    android:id="@+id/txt_main_test"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="测试用例"/>
+
+                <ImageView
+                    android:id="@+id/iv_main_test"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"/>
+
+                <!--  <com.baidu.mapapi.map.MapView
+                      android:id="@+id/map_main"
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"/>-->
+                <com.xi6666.view.EmptyLayout
+                    android:id="@+id/eml_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <in.srain.cube.views.ptr.PtrFrameLayout
+                        android:id="@+id/pfl_text"
+                        xmlns:cube_ptr="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        cube_ptr:ptr_duration_to_close="200"
+                        cube_ptr:ptr_duration_to_close_header="1000"
+                        cube_ptr:ptr_keep_header_when_refresh="true"
+                        cube_ptr:ptr_pull_to_fresh="false"
+                        cube_ptr:ptr_ratio_of_header_height_to_refresh="1.2"
+                        cube_ptr:ptr_resistance="1.7"
+                        >
+
+                        <com.xi6666.view.superrecyclerview.XRecyclerView
+                            android:id="@+id/xrlv_main"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </in.srain.cube.views.ptr.PtrFrameLayout>
+
+                </com.xi6666.view.EmptyLayout>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

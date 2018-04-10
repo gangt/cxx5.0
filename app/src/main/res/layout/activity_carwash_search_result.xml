@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- TAB切换 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:orientation="horizontal">
+
+        <com.xi6666.carWash.view.custom.SortTabView
+            android:id="@+id/carWash_search_default_stv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#f2f5f2"
+            app:tab_icon_hidden="true"
+            app:tab_select="true"
+            app:tab_title="从近到远" />
+
+        <com.xi6666.carWash.view.custom.SortTabView
+            android:id="@+id/carWash_search_evaluate_stv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#f2f5f2"
+            app:tab_icon_hidden="true"
+            app:tab_select="false"
+            app:tab_title="评分" />
+    </LinearLayout>
+
+
+
+    <com.xi6666.carWash.base.view.CxxErrorView
+        android:id="@+id/carWash_search_error_view"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="match_parent" />
+
+
+    <com.xi6666.view.superrecyclerview.XRecyclerView
+        android:id="@+id/carWash_search_xrv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible" />
+
+    <!-- 错误提示-->
+    <LinearLayout
+        android:id="@+id/carWash_search_null_tv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_owner_evaluation_not" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="暂无相关门店"
+            android:textColor="@color/text_gray"
+            android:textSize="14sp" />
+
+
+    </LinearLayout>
+</LinearLayout>

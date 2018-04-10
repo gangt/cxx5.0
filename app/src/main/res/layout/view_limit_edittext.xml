@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/view_limit_content_et"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textSize="12sp"
+        android:textColor="@color/text_black"
+        android:textColorHint="@color/text_gray"
+        android:background="@null"
+        android:gravity="top"
+        android:hint="请写下你的评价，每一个反馈我们都倍加珍视，感谢你的关注!"/>
+
+
+
+
+    <TextView
+        android:id="@+id/view_limit_size_tv"
+        android:layout_gravity="right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="@color/text_gray"
+        android:text="5/250"/>
+
+</LinearLayout>

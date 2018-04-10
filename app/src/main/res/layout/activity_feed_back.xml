@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/activity_feed_back"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/divColor"
+    tools:context="com.xi6666.feedback.view.FeedBackAct">
+
+    <EditText
+        android:id="@+id/et_feedback"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_login_btn"
+        android:gravity="left"
+        android:hint="请留下您的宝贵意见和建议,我们将努力改进 "
+        android:maxEms="100"
+        android:maxLength="250"
+        android:padding="10dp"
+        android:textSize="13dp"/>
+
+    <TextView
+        android:id="@+id/tv_feedback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="120dp"
+        android:text="0/250"
+        android:textColor="@color/addOillight"
+        android:textSize="11sp"/>
+
+</RelativeLayout>

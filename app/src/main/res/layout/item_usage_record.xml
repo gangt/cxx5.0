@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/item_usage_record_number_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_marginLeft="15dp"
+        android:gravity="center_vertical"
+        android:text="详情编号: 67778521528"
+        android:textColor="@color/text_black"
+        android:textSize="13sp" />
+
+
+    <TextView
+        android:id="@+id/item_usage_record_status_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="17dp"
+        android:gravity="center_vertical"
+        android:text="待审核"
+        android:textColor="@color/text_orange"
+        android:textSize="12sp" />
+
+
+    <View
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_below="@+id/item_usage_record_number_tv"
+        style="@style/horizontal_view" />
+
+
+    <!-- 内容 -->
+    <TextView
+        android:id="@+id/item_usage_record_content_tv"
+        android:layout_width="325dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_usage_record_number_tv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="21dp"
+        android:background="#f2f5f2"
+        android:paddingBottom="9dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="9dp"
+        android:text="我牛我放假晚if我就放假晚叫我囧就就我我我放假哦我我忘记哦我囧囧叫我"
+        android:textColor="@color/gray_text" />
+
+    <!-- 使用日期 -->
+    <TextView
+        android:id="@+id/item_usage_record_time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/item_usage_record_number_tv"
+        android:layout_below="@+id/item_usage_record_content_tv"
+        android:layout_marginBottom="14dp"
+        android:layout_marginTop="18dp"
+        android:text="使用日期: xxxx-xx-xx"
+        android:textColor="@color/black" />
+
+
+    <ImageView
+        android:id="@+id/item_usage_record_status_iv"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="11dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:src="@drawable/has_cancel_icon"/>
+
+
+    <!-- 处理次数 -->
+    <TextView
+        android:id="@+id/item_usage_record_num_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/item_usage_record_content_tv"
+        android:layout_marginBottom="14dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginTop="18dp"
+        android:text="共处理: 1 次"
+        android:textColor="@color/black" />
+
+</RelativeLayout>

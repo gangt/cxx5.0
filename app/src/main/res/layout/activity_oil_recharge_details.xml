@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include
+        layout="@layout/base_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- 未到账 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="106dp"
+                android:background="@color/text_green"
+                android:orientation="horizontal"
+                >
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/wdz_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="11dp"
+                        android:text="本月应到账金额:"
+                        android:textColor="@color/white"
+                        android:textSize="13sp"/>
+
+
+                    <!--需要支付的金额-->
+                    <TextView
+                        android:id="@+id/oil_recharge_w_details_moeny"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/wdz_tv"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="23dp"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:textSize="29sp"
+                        android:textStyle="bold"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginTop="30dp"
+                    android:background="#80ffffff"/>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/item_oil_recharge_details_ck"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="34dp"
+                        android:drawableRight="@mipmap/ic_jusp_gray"
+                        android:text="更多"
+                        android:textColor="@color/white"
+                        android:visibility="gone"/>
+
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="15dp"
+
+                        android:layout_marginTop="11dp"
+                        android:text="累积充值金额:"
+                        android:textColor="@color/white"
+                        android:textSize="13sp"/>
+
+                    <TextView
+                        android:id="@+id/txt_ljcz"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="50dp"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:textSize="29sp"
+                        android:textStyle="bold"/>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/fl_oil_recharge"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <View style="@style/horizontal_view"/>
+
+    <Button
+        android:id="@+id/oil_recharge_details_topay_btn"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_gravity="center"
+        android:background="@color/themeColor"
+        android:text="去充值"
+        android:textColor="@android:color/white"
+        android:textSize="17sp"/>
+</LinearLayout>

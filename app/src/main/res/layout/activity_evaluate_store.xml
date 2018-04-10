@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <!--   选择门店服务   -->
+    <LinearLayout
+        android:id="@+id/evaluate_store_select_type_ll"
+        android:layout_width="match_parent"
+        android:layout_height="73dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="选择门店服务" />
+
+
+        <!--    选择服务    -->
+        <!--<com.xi6666.store.custom.EvaluateItemView-->
+        <!--android:id="@+id/evaluate_store_evaluate_eiv"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:layout_marginLeft="16dp" />-->
+        <com.xi6666.store.custom.TagFlowLayout
+            android:id="@+id/evaluate_store_evaluate_tfl"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            app:auto_select_effect="true"
+            app:max_select="1" />
+
+    </LinearLayout>
+
+
+    <!--       给服务打分        -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:text="给服务打分"
+            android:textSize="13sp" />
+
+        <View
+            style="@style/horizontal_view"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" />
+
+        <!-- 评价 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp">
+
+            <!-- 评分 -->
+            <com.xi6666.store.custom.EvaluateBar
+                android:id="@+id/evaluate_store_star_eb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:starCount="5"
+                app:starDistance="4dp"
+                app:starEmpty="@mipmap/ic_score_star_select"
+                app:starFill="@mipmap/ic_score_star_selected"
+                app:starMark="0.0"
+                app:starSize="18dp" />
+
+            <!-- 分数 -->
+            <TextView
+                android:id="@+id/evaluate_store_star_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:text="0.0分"
+                android:textColor="@color/text_orange"
+                android:textSize="17sp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <!-- 上传图片  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="98dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:text="上传图片 (最多可上传5张)"
+            android:textSize="13sp" />
+
+
+        <!-- 图片选择器 -->
+        <com.xi6666.store.custom.SelectImageView
+            android:id="@+id/evaluate_store_select_image_siv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp" />
+
+    </LinearLayout>
+
+
+    <!--    评价服务      -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="评价服务" />
+
+        <View style="@style/horizontal_view" />
+
+        <com.xi6666.view.custom.LimitEditTextView
+            android:id="@+id/evaluate_store_content_letv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFF5F5F5"
+            android:imeOptions="actionNext"
+            android:minHeight="200dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            app:hint="请写下你的评价，每一个反馈我们都倍加珍视，感谢你的关注"
+            app:maxLength="250" />
+
+        <View
+            style="@style/horizontal_view"
+            android:layout_marginBottom="70dp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,10 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- This is the line -->
+    <item ><shape>
+        <solid android:color="@color/divColor"
+            />
+    </shape></item>
+    <item android:bottom="1dp"><shape>
+        <solid android:color="@color/white" />
+    </shape></item>
+</layer-list>

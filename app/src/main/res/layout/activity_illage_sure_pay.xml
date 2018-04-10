@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/activity_illage_sure_pay"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.xi6666.illegal.Activity.IllageSurePayAct">
+
+    <include layout="@layout/base_toolbar"
+             android:layout_height="wrap_content"
+        android:layout_width="match_parent"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/car_wash_pay_btn"
+            android:background="@color/divColor">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/divColor"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/bg_carwash_surepay">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"
+                        android:text="违章卡"
+                        android:textColor="@color/homeAddressTxtColor"
+                        android:textSize="17sp"/>
+
+                    <TextView
+                        android:id="@+id/txt_illagesurepay_title_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="47dp"
+                        android:text="6666"
+                        android:textColor="@color/text_orange"
+                        android:textSize="40sp"/>
+
+
+                    <TextView
+                        android:id="@+id/txt_illagesurepay_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginTop="95dp"
+                        android:text="¥"
+                        android:textColor="@color/addOillight"
+                        android:textSize="20sp"/>
+
+                    <TextView
+                        android:id="@+id/txt_illagesurepay_message"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="100dp"
+                        android:text="充值金额"
+                        android:textColor="@color/addOillight"
+                        android:textSize="13sp"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_illagesurepay_message"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="15dp"
+                        android:text="有效期"
+                        android:textColor="@color/addOillight"
+                        android:textSize="13sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/txt_illagesurepay_prescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/txt_illagesurepay_message"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginTop="15dp"
+                        android:text="￥"
+                        android:textColor="@color/addOillight"
+                        android:textSize="13sp"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/car_wash_pay_discount_moeny"
+                        android:layout_marginTop="15dp"
+                        android:text="优惠金额"
+                        android:textSize="15sp"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/car_wash_pay_discount_moeny"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/txt_illagesurepay_prescription"
+                        android:layout_marginRight="29dp"
+                        android:layout_marginTop="15dp"
+                        android:text="￥300.00"
+                        android:textSize="15sp"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/txt_illagesurepay_frequency"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="15dp"
+                        android:text="可处理次数"
+                        android:textColor="@color/addOillight"
+                        android:textSize="13sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/txt_illagesurepay_frequency"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/car_wash_pay_discount_moeny"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginTop="15dp"
+                        android:text="¥"
+                        android:textColor="@color/addOillight"
+                        android:textSize="13sp"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_illagesurepay_discount"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/rv"
+                    android:layout_marginTop="26dp"
+                    android:background="@android:color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:text="优惠券"
+                        android:textColor="@android:color/black"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:id="@+id/txt_illagesurepay_discount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:drawablePadding="5dp"
+                        android:drawableRight="@drawable/gaosiline_icon_next"
+                        android:text="暂无券可用"
+                        android:textColor="@color/addOillight"
+                        android:textSize="15sp"/>
+
+
+                </RelativeLayout>
+
+                <!-- 选择支付方式 -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rv"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/whiteTextColor"
+                    android:orientation="vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
+
+                    <TextView
+                        android:id="@+id/tv_01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"
+                        android:gravity="center"
+
+                        android:text="选择支付方式"
+                        android:textColor="@color/txtMineOrderDefault"
+                        android:textSize="15sp"/>
+
+                    <!-- 分割线 -->
+                    <View
+                        style="@style/horizontal_view"
+                        android:layout_below="@+id/tv_01"/>
+                    <!-- 支付宝支付 -->
+                    <RelativeLayout
+                        android:id="@+id/pay_wechat_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="59dp"
+                        android:layout_below="@+id/tv_01"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/pay_wechat_iv"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="4dp"
+                            android:src="@mipmap/ic_wechat_pay"/>
+
+                        <TextView
+                            android:id="@+id/pay_wechat_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="85dp"
+                            android:text="微信支付"
+                            android:textColor="@color/text_black"
+                            android:textSize="16sp"/>
+
+                        <CheckBox
+                            android:id="@+id/pay_wechat_rb"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+
+                            android:background="@drawable/ic_car_wars"
+                            android:button="@null"
+                            android:checked="true"
+                            android:clickable="false"/>
+
+                    </RelativeLayout>
+
+                    <!-- 分割线 -->
+                    <View
+                        style="@style/horizontal_view"
+                        android:layout_below="@+id/pay_wechat_ll"/>
+                    <!-- 支付宝支付 -->
+                    <RelativeLayout
+                        android:id="@+id/pay_ali_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="59dp"
+                        android:layout_below="@+id/pay_wechat_ll"
+
+                        android:orientation="horizontal"
+                        android:text="支付宝">
+
+                        <ImageView
+                            android:id="@+id/pay_ali_iv"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="4dp"
+                            android:src="@mipmap/ic_ali_pay"/>
+
+                        <TextView
+                            android:id="@+id/pay_ali_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="85dp"
+                            android:text="支付宝"
+                            android:textColor="@color/text_black"
+                            android:textSize="16sp"/>
+
+                        <CheckBox
+                            android:id="@+id/pay_ali_rb"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/ic_car_wars"
+                            android:button="@null"
+                            android:clickable="false"/>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/pay_ali_ll"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="10dp"
+                    android:text="*违章卡仅处理违章卡有效期内的违章;暂不支持北京、深圳、上海、广州地区的违章,以上地区将在后续开放处理。"
+                    android:textColor="@color/text_gray"
+                    android:textSize="11sp"/>
+            </LinearLayout>
+        </ScrollView>
+
+        <View
+            style="@style/horizontal_view"
+            android:layout_above="@+id/car_wash_pay_btn"/>
+
+        <Button
+            android:id="@+id/car_wash_pay_btn"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/text_green"
+            android:text="确认支付xx"
+            android:textColor="@color/whiteTextColor"
+            android:textSize="17sp"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_confirm_use"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#dce0df"
+    tools:context="com.xi6666.illegal.Activity.ConfirmUseActivity">
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/layout_error_retry"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60dp">
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.xi6666.view.superrecyclerview.XRecyclerView
+                android:id="@+id/use_xRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </com.xi6666.view.superrecyclerview.XRecyclerView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/whiteTextColor"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:gravity="center_vertical"
+                        android:text="违章卡号"
+                        android:textColor="#313131"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_cs_illegal_card_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:gravity="center_vertical"
+                        android:layout_alignParentRight="true"
+                        android:text=""
+                        android:textColor="#313131"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:gravity="center_vertical"
+                        android:text="违章卡类型"
+                        android:textColor="#313131"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_cs_illegal_card_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:gravity="center_vertical"
+                        android:layout_alignParentRight="true"
+                        android:text=""
+                        android:textColor="#313131"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:gravity="center_vertical"
+                            android:text="本次处理违章次数"
+                            android:textColor="#313131"
+                            android:textSize="16sp" />
+                        <TextView
+                            android:id="@+id/tv_cs_illegal_details"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:gravity="center_vertical"
+                            android:text=""
+                            android:textColor="#929292"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_cs_illegal_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:gravity="center_vertical"
+                        android:layout_alignParentRight="true"
+                        android:text=""
+                        android:textColor="#313131"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/whiteTextColor"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="联系电话(选填)"
+                    android:textColor="#313131"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/et_illegal_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignParentRight="true"
+                    android:hint="请填写联系电话"
+                    android:background="@null"
+                    android:maxLines="1"
+                    android:maxLength="11"
+                    android:textColor="#313131"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_confirm_use"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/themeColor"
+        android:layout_alignParentBottom="true"
+        android:text="确认使用违章卡"
+        android:textColor="@color/whiteTextColor"
+        android:textSize="20sp"/>
+</RelativeLayout>

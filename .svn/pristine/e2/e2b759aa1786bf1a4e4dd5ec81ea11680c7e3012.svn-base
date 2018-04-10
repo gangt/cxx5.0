@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+    <!-- 车主评价  -->
+    <RelativeLayout
+        android:id="@+id/view_store_details_evaluate_details_rl"
+        android:layout_width="match_parent"
+        android:layout_height="71dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <!-- 标题 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="29dp"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="3dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="14dp"
+                android:background="@color/text_green" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="车主评价"
+                android:textColor="@color/text_black" />
+
+            <TextView
+                android:id="@+id/store_details_evaluate_num_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:text="(0条评价)"
+                android:textColor="#c2c2c2"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <!-- 评价 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp">
+
+            <!-- 评分 -->
+            <com.xi6666.store.custom.EvaluateBar
+                android:id="@+id/store_details_evaluate_star_eb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:starCount="5"
+                app:starDistance="4dp"
+                app:starEmpty="@mipmap/ic_score_star_select"
+                app:starFill="@mipmap/ic_score_star_selected"
+                app:starSize="18dp"
+                app:touch="false" />
+
+            <!-- 分数 -->
+            <TextView
+                android:id="@+id/store_details_evaluate_star_tv"
+                android:layout_marginLeft="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_orange"
+                android:textSize="17sp"
+                android:text="0.0分"/>
+
+            <TextView
+                android:id="@+id/store_details_evaluate_not_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:text="你来成为第一个评价的人吧!"/>
+
+        </LinearLayout>
+
+        <!-- 跳转按钮 -->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:padding="10dp"
+            android:src="@mipmap/ic_jusp_gray" />
+    </RelativeLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/store_details_evaluate_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray" />
+
+    <com.xi6666.carWash.base.view.CxxNotView
+        android:id="@+id/store_details_not_tv"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        app:text="暂无评论\n你来成为第一个评论的人吧!"
+        android:layout_height="match_parent" />
+
+
+    <TextView
+        android:id="@+id/view_store_details_evaluate_more_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="15dp"
+        android:background="@mipmap/bg_radius_border_green"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="查看全部评价"
+        android:textColor="@color/text_green"
+        android:textSize="13sp" />
+
+</LinearLayout>

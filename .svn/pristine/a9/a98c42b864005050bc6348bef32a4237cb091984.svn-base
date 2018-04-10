@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#dce0df"
+    tools:context=".order.activity.MyShoppingCartActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/msc_tb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        style="@style/ClubToolbar"
+        android:background="@color/whiteTextColor"
+        android:fitsSystemWindows="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_msc_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/back_black"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="我的购物车"
+                android:textColor="#121212"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/tv_msc_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:text="编辑"
+                android:textColor="#626262"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tv_msc_done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:visibility="gone"
+                android:layout_marginRight="15dp"
+                android:text="完成"
+                android:textColor="#626262"
+                android:textSize="16sp"/>
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <include
+        android:layout_below="@id/msc_tb"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/layout_error_retry"/>
+
+    <com.xi6666.view.superrecyclerview.XRecyclerView
+        android:id="@+id/msc_XRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/msc_tb"
+        android:layout_marginBottom="50dp">
+    </com.xi6666.view.superrecyclerview.XRecyclerView>
+
+    <TextView
+        android:id="@+id/tv_no_sp"
+        android:layout_below="@+id/msc_tb"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:gravity="center"
+        android:text="购物车空空如也，快去商城添加商品吧！"
+        android:textSize="14sp"
+        android:textColor="#757575"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_msc_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/whiteTextColor"
+        android:layout_alignParentBottom="true">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#e9e9e9"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+            <CheckBox
+                android:id="@+id/msc_cb_bottom"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="15dp"
+                android:button="@null"
+                android:checked="false"
+                android:drawableLeft="@drawable/selector_car_info"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#313131"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:textSize="14sp"
+                android:text="全选"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_msc_to_pay"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:text="去结算"
+            android:gravity="center"
+            android:background="@color/themeColor"
+            android:textColor="@color/whiteTextColor"
+            android:textSize="18sp"/>
+
+        <LinearLayout
+            android:id="@+id/ll_msc_total_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="35dp"
+            android:layout_toLeftOf="@id/tv_msc_to_pay"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#f53825"
+                android:textSize="18sp"
+                android:text="合计:　"/>
+
+            <TextView
+                android:id="@+id/tv_msc_need_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="#f53825"
+                android:textSize="17sp"
+                android:text="¥ 0.00"/>
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_msc_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:text="删除"
+            android:textSize="16sp"
+            android:textColor="#f53825"
+            android:background="@drawable/delete_btn_bg"/>
+    </RelativeLayout>
+
+</RelativeLayout>

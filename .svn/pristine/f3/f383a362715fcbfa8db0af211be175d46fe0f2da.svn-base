@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+    android:background="@color/whiteTextColor">
+
+    <ImageView
+        android:id="@+id/item_iv_goods_img"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="17dp"
+        android:src="@drawable/no_data_empty"
+        android:scaleType="centerCrop"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/item_tv_goods_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="安吉大道骄傲了绝对垃圾的垃圾的垃圾的垃圾垃圾了大家都拉"
+            android:textColor="#313131"
+            android:textSize="16sp"
+            android:maxLines="2"
+            android:ellipsize="end"/>
+
+        <TextView
+            android:id="@+id/item_tv_goods_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text=""
+            android:textColor="#929292"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/item_tv_goods_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text=""
+            android:textColor="#929292"
+            android:textSize="14sp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true">
+
+                <TextView
+                    android:id="@+id/item_tv_goods_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text=""
+                    android:textColor="#929292"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/item_tv_goods_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text=""
+                    android:textColor="#929292"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+            
+            <Button
+                android:id="@+id/item_btn_evaluate"
+                android:layout_width="90dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:text="立即评价"
+                android:textColor="@color/themeColor"
+                android:textSize="16sp"
+                android:background="@drawable/go_pingjia_bg"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

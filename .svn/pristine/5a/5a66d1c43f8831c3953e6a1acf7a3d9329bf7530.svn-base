@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+
+    <!-- 标题  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="43dp">
+
+        <TextView
+            android:id="@+id/cashier_pay_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:text="选择优惠方式"
+            android:textSize="13sp"/>
+    </LinearLayout>
+
+
+    <!-- Item  -->
+    <ListView
+        android:id="@+id/cashier_pay_lv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:divider="@null"
+      
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/divColor"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="115dp">
+
+        <TextView
+            android:id="@+id/txt_cashier_canuse_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="13dp"
+            android:text="洗车卡可用余额"
+            android:textColor="@color/txtMineOrderDefault"
+            android:textSize="13sp"/>
+
+        <TextView
+            android:id="@+id/txt_cashier_remarks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_cashier_canuse_money"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="13dp"
+            android:text="注:洗车卡每周仅限使用一次。\n每次最高只能抵扣40元消费额。"
+            android:textColor="@color/txtSettingVersion"
+            android:textSize="13sp"/>
+    </RelativeLayout>
+</LinearLayout>

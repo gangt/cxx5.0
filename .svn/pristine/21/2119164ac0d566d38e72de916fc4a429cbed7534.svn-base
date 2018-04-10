@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!-- 内容 -->
+    <ScrollView
+        android:id="@+id/home_search_default_sl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 热门搜索块-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/whiteTextColor"
+                android:orientation="vertical"
+                android:paddingBottom="23dp"
+                android:paddingLeft="23dp"
+                android:paddingRight="23dp"
+                android:paddingTop="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="热门搜索"
+                    android:textColor="@color/text_black"
+                    android:textSize="13sp" />
+
+                <com.xi6666.classification.view.custom.TagCloudView
+                    android:id="@+id/home_hot_search_tcv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    app:tcvBackground="@drawable/ic_home_search_tag"
+                    app:tcvBorder="8dp"
+                    app:tcvCanTagClick="true"
+                    app:tcvItemBorderHorizontal="11dp"
+                    app:tcvItemBorderVertical="11dp"
+                    app:tcvTextColor="@color/text_black" />
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+
+            <!-- 历史搜索-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/whiteTextColor"
+                android:orientation="vertical"
+                android:paddingLeft="23dp"
+                android:paddingRight="23dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="43dp"
+                    android:gravity="center_vertical"
+                    android:text="历史搜索"
+                    android:textColor="@color/text_black"
+                    android:textSize="13sp" />
+
+                <View style="@style/horizontal_view" />
+
+                <com.xi6666.classification.view.custom.BaseListView
+                    android:id="@+id/home_history_search_blv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/home_clear_history_btn"
+                    android:layout_width="100dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="21dp"
+                    android:layout_marginTop="21dp"
+                    android:gravity="center"
+                    android:text="清除记录"
+                    android:textSize="12sp"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/home_no_search_data_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="100dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="暂无搜索记录"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- 历史记录 -->
+    <LinearLayout
+        android:id="@+id/home_search_result_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <!-- TAB切换栏-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- 第一个Tab -->
+            <com.xi6666.carWash.view.custom.SortTabView
+                android:id="@+id/brand_details_tab_one"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:tab_icon_hidden="true"
+                app:tab_select="true"
+                app:tab_title="默认" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="19dp"
+                android:background="@color/gray" />
+
+
+            <!-- 第二个Tab -->
+            <com.xi6666.carWash.view.custom.SortTabView
+                android:id="@+id/brand_details_tab_three"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:tab_select="false"
+                app:tab_sort="true"
+                app:tab_title="价格" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="19dp"
+                android:background="@color/gray" />
+
+
+            <!-- 第三个Tab -->
+            <com.xi6666.carWash.view.custom.SortTabView
+                android:id="@+id/brand_details_tab_two"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:tab_icon_hidden="true"
+                app:tab_title="销量" />
+        </LinearLayout>
+
+        <com.xi6666.carWash.base.view.CxxNotView
+            android:id="@+id/brand_details_not_view"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            app:text="暂无查询结果"
+            android:layout_height="match_parent" />
+
+        <com.xi6666.view.superrecyclerview.XRecyclerView
+            android:id="@+id/home_search_result_xrv"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            android:layout_height="match_parent"
+            android:visibility="visible" />
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/toolbar_rv"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="@color/white"
+            android:paddingBottom="10dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:paddingTop="10dp">
+
+            <LinearLayout
+                android:id="@+id/search_toolbar_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_toLeftOf="@+id/search_toolbar_right_tv"
+                android:background="@mipmap/bg_soso_gray"
+                android:gravity="center_vertical">
+
+                <!--  搜索按钮 -->
+                <ImageView
+                    android:id="@+id/search_toolbar_left_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:src="@mipmap/ic_query_green" />
+
+                <!--  搜索的文本 -->
+                <EditText
+                    android:id="@+id/search_toolbar_title_iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="请输入商家名称"
+                    android:inputType="text"
+                    android:imeOptions="actionSearch"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <!-- 右边文本 -->
+            <TextView
+                android:id="@+id/search_toolbar_right_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="6dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="取消"
+                android:textColor="@color/text_green"
+                android:textSize="13sp" />
+
+        </RelativeLayout>
+
+        <!-- 标题栏下面的分割线 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:visibility="gone"
+            android:layout_below="@+id/toolbar_rv"
+            android:background="@color/gray" />
+
+
+    </RelativeLayout>
+
+
+    <!-- 身体 -->
+    <LinearLayout
+        android:id="@+id/toolbar_body"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#dce0df"
+        android:orientation="vertical" />
+
+
+</LinearLayout>

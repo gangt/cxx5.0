@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/whiteTextColor"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        style="@style/horizontal_view" />
+
+    <LinearLayout
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="43dp">
+        <!-- 时间 -->
+        <TextView
+            android:id="@+id/item_oil_recharge_details_time"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:textColor="@color/text_black"
+            android:textSize="13sp"/>
+
+        <!-- 套餐类型 -->
+        <TextView
+            android:id="@+id/item_oil_recharge_details_type"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:textColor="@color/text_black"
+            android:textSize="13sp"/>
+
+        <!-- 充值金额 -->
+        <TextView
+            android:id="@+id/item_oil_recharge_details_moeny"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:textColor="@color/text_black"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="59dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/gray" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical">
+
+        <!-- icon -->
+        <ImageView
+            android:id="@+id/item_view_cashier_pay_icon_iv"
+            android:layout_width="39dp"
+            android:layout_height="39dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="11dp" />
+
+        <TextView
+            android:id="@+id/item_view_cashier_pay_title_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="支付宝"
+            android:textColor="@color/text_black"
+            android:textSize="13sp" />
+
+
+        <CheckBox
+            android:id="@+id/item_view_cashier_pay_select_ck"
+            android:layout_width="29dp"
+            android:layout_height="29dp"
+            android:layout_marginRight="10dp"
+            android:button="@null"
+            android:checked="false"
+            android:clickable="false"
+            android:drawableLeft="@drawable/selector_car_info" />
+    </LinearLayout>
+
+
+</LinearLayout>

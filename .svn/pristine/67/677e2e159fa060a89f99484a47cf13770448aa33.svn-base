@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:colors="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_pay_failed"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#dce0df"
+    tools:context="com.xi6666.order.activity.PayFailedActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#e2e2e2"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:orientation="vertical"
+            android:background="@color/whiteTextColor"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/pay_fialed"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="支付失败"
+                android:textSize="18sp"
+                android:textColor="#313131"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.xi6666.order.other.ColorTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_to_pay"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="right"
+        android:text="请拨打故障服务电话 400-9999-353"
+        android:textColor="#626262"
+        android:textSize="16sp"
+        colors:color_texts="400-9999-353"
+        colors:color_arrays="#13ce78"/>
+
+    <Button
+        android:id="@+id/btn_to_pay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:text="去支付"
+        android:textColor="@color/whiteTextColor"
+        android:textSize="20sp"
+        android:background="@color/themeColor"/>
+
+</RelativeLayout>

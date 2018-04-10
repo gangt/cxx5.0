@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.xi6666.view.CompatToolbar android:id="@+id/base_tb"
+                               xmlns:android="http://schemas.android.com/apk/res/android"
+                               xmlns:app="http://schemas.android.com/apk/res-auto"
+                               android:layout_width="match_parent"
+                               android:layout_height="?attr/actionBarSize"
+                               android:background="#ffffff"
+                               android:orientation="vertical"
+                               style="@style/ClubToolbar"
+                               app:contentInsetLeft="0dp"
+                               app:contentInsetStart="0dp">
+
+    <TextView
+        android:id="@+id/txt_toolbar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="哈哈"
+        android:textColor="#313131"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/txt_toolbar_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="20dp"
+        android:text="更多"
+        android:textSize="16sp"
+        android:textColor="#313131"/>
+</com.xi6666.view.CompatToolbar>

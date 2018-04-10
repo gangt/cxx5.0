@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.xi6666.order.other.SwipeMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:clickable="true">
+
+    <LinearLayout
+        android:id="@+id/ll_item_illagehome"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@android:color/white">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_alignParentBottom="true"
+                android:background="#F2F2F2">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerInParent="true"
+                    android:background="#c2c2c2"/>
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/bg_item_illagehome"/>
+
+            <ImageView
+                android:id="@+id/iv_item_illagehome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="22dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/ic_item_illagehome_bind"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/tv_item_illagehome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="40dp"
+                android:drawableLeft="@drawable/ic_shape_item_illagehome"
+                android:drawablePadding="7dp"
+                android:text="粤111"
+                android:textColor="@android:color/white"
+                android:textSize="17sp"
+                android:textStyle="bold"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:background="#dce0df"
+        android:gravity="center"
+        android:weightSum="10">
+
+        <ImageView
+            android:id="@+id/iv_item_illagehome_delete"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/delete_icon"/>
+    </LinearLayout>
+
+</com.xi6666.order.other.SwipeMenuLayout>

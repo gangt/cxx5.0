@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.xi6666.login.view.LoginAct">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginTop="36dp">
+
+            <ImageView
+                android:id="@+id/iv_login_cancle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:src="@drawable/ic_login_cancle"/>
+
+            <TextView
+                android:id="@+id/txt_login_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="手机登录"
+                android:textColor="@color/themeColor"
+                android:textSize="17sp"/>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="41dp"
+            android:src="@drawable/ic_login_head"/>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_login"
+            android:layout_width="match_parent"
+            android:layout_height="92dp"
+            android:layout_marginTop="130dp"
+            />
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="307dp"
+            android:layout_height="42dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="65dp"
+            android:background="@drawable/bg_radius_green"
+            android:gravity="center"
+            android:text="登录"
+            android:textColor="@android:color/white"
+            android:textSize="17sp"/>
+
+        <TextView
+            android:id="@+id/txt_login_state"
+            android:layout_width="307dp"
+            android:layout_height="42dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_login_state"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="商户车主端登录"
+            android:textColor="@color/themeColor"
+            android:textSize="17sp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txt_login_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="17dp"
+                android:text="有疑问请拨打服务平台热线  400-9999-353(转0)"
+                android:textColor="@color/txtSettingVersion"
+                android:textSize="12sp"/>
+        </RelativeLayout>
+    </LinearLayout>
+</FrameLayout>

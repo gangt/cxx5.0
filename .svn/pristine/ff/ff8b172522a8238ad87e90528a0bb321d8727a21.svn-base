@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.xi6666.view.EmptyLayout
+    android:id="@+id/el_address_producthome"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.xi6666.producthome.view.ProductHomeAct">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.xi6666.view.superrecyclerview.XRecyclerView
+            android:id="@+id/xrec_producthome"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/divColor"
+            />
+
+        <ImageView
+            android:id="@+id/iv_producthome_backtop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="40dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/ic_back_top"/>
+
+        <ImageView
+            android:id="@+id/iv_producthome_shopcar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="90dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/ic_gouwuyc"/>
+
+    </RelativeLayout>
+
+
+</com.xi6666.view.EmptyLayout>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 标题 -->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:fitsSystemWindows="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/toolbar_left_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:layout_centerVertical="true"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_left_gray" />
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="请选择品牌"
+                android:textColor="@color/text_black"
+                android:textSize="20sp" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <!--  分割线 -->
+    <View style="@style/horizontal_view" />
+
+    <LinearLayout
+        android:id="@+id/select_car_menu"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:background="#dddddd"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/select_data_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/select_car_one_rv"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent">
+
+        <!-- 分割线 -->
+        <View
+            style="@style/h_view"
+            android:layout_toLeftOf="@+id/select_car_sel" />
+
+        <!-- 字母导航条 -->
+        <com.xi6666.car.view.custom.LetterView
+            android:id="@+id/select_car_sel"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@color/whiteTextColor" />
+
+
+        <!-- -->
+        <ExpandableListView
+            android:id="@+id/select_car_elv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/select_car_sel"
+            android:divider="@color/text_black"
+            android:dividerHeight="1dp"
+            android:groupIndicator="@null" />
+
+
+        <!-- 放大镜 -->
+        <TextView
+            android:id="@+id/fdj_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/select_car_sel"
+            android:background="@mipmap/ic_white_dialog"
+            android:gravity="left|center"
+            android:paddingBottom="6dp"
+            android:paddingLeft="18dp"
+            android:paddingRight="6dp"
+            android:text="H"
+            android:textColor="@color/text_black"
+            android:textSize="30sp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</LinearLayout>

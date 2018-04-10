@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!-- 头像 -->
+    <ImageView
+        android:id="@+id/view_technician_profile_head_iv"
+        android:layout_width="67dp"
+        android:layout_height="67dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp" />
+
+
+    <!-- 名字 -->
+    <TextView
+        android:id="@+id/view_technician_profile_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/text_black"
+        android:textSize="12dp" />
+
+
+    <!-- 简介 -->
+    <TextView
+        android:id="@+id/view_technician_profile_desc_tv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:text="这技师很懒，什么都没留下"
+        android:maxEms="80"
+        android:maxLines="3"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="#929292"
+        android:textSize="12sp" />
+
+</LinearLayout>

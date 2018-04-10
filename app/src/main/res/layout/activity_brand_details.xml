@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- TAB切换栏-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <!-- 第一个Tab -->
+        <com.xi6666.carWash.view.custom.SortTabView
+            android:id="@+id/brand_details_tab_one"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:tab_icon_hidden="true"
+            app:tab_select="true"
+            app:tab_title="默认" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="19dp"
+            android:background="@color/gray" />
+
+
+        <!-- 第二个Tab -->
+        <com.xi6666.carWash.view.custom.SortTabView
+            android:id="@+id/brand_details_tab_three"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:tab_select="false"
+            app:tab_sort="true"
+            app:tab_title="价格" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="19dp"
+            android:background="@color/gray" />
+
+
+        <!-- 第三个Tab -->
+        <com.xi6666.carWash.view.custom.SortTabView
+            android:id="@+id/brand_details_tab_two"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:tab_icon_hidden="true"
+            app:tab_title="销量" />
+    </LinearLayout>
+
+    <!-- 没有数据 -->
+    <com.xi6666.carWash.base.view.CxxNotView
+        android:id="@+id/brand_details_not_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:text="暂无商品品牌" />
+
+    <com.xi6666.carWash.base.view.CxxErrorView
+        android:id="@+id/brand_details_error_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+
+    <com.xi6666.view.superrecyclerview.XRecyclerView
+        android:id="@+id/brand_details_xrv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp" />
+</LinearLayout>
+

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+    android:background="#dcf8eb">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:id="@+id/item_tv_service_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text=""
+            android:maxLength="10"
+            android:ellipsize="end"
+            android:textSize="12sp"
+            android:textColor="@color/light_gray_text"/>
+
+        <TextView
+            android:id="@+id/item_tv_service_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/item_tv_service_name"
+            android:layout_marginLeft="15dp"
+            android:layout_centerVertical="true"
+            android:text=""
+            android:textSize="14sp"
+            android:textColor="@color/red_text"/>
+
+        <Button
+            android:id="@+id/item_btn_to_pay"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:text="去支付"
+            android:textColor="@color/whiteTextColor"
+            android:textSize="16sp"
+            android:background="@drawable/to_pay_btn_bg"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+</LinearLayout>

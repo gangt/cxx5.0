@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_pay_success"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#dce0df"
+    tools:context="com.xi6666.order.activity.PaySuccessActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#e2e2e2"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:orientation="vertical"
+            android:background="@color/whiteTextColor"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/pay_success"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="支付成功"
+                android:textSize="18sp"
+                android:textColor="#313131"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_cha_red_package"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/red_package_btn"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_fen_dan_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_pay_done"
+        android:layout_marginBottom="50dp"
+        android:layout_marginLeft="20dp"
+        android:visibility="gone"
+        android:layout_marginRight="20dp"
+        android:text="因你购买的商品分属不同商家，系统已对订单进行拆分，给您带来的不便敬请谅解！\n你可以在“我的订单-商品订单”中查看详情和物流。"
+        android:textColor="#626262"
+        android:textSize="16sp"/>
+
+    <Button
+        android:id="@+id/btn_pay_done"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:text="完  成"
+        android:textColor="@color/whiteTextColor"
+        android:textSize="20sp"
+        android:background="@color/themeColor"/>
+
+</RelativeLayout>

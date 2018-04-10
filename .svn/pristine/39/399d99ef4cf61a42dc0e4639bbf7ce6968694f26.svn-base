@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    android:orientation="vertical">
+
+
+    <com.xi6666.store.custom.MonitorScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!-- 技师简介 -->
+            <com.xi6666.technician.view.custom.TechnicianProfileView
+                android:id="@+id/view_technician_details_tpv"
+                android:layout_width="match_parent"
+                android:layout_height="174dp"
+                android:background="@color/white" />
+
+
+            <!-- 提问问题 -->
+            <com.xi6666.technician.view.custom.QuestionsTechnicianView
+                android:id="@+id/view_technician_details_qtv"
+                android:layout_width="match_parent"
+                android:layout_height="132dp"
+                android:layout_marginTop="12dp"
+                android:background="@color/white" />
+
+
+            <!-- Ta的回答 -->
+            <com.xi6666.technician.view.custom.TechnicianAnswerView
+                android:id="@+id/view_technician_details_tav"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp" />
+        </LinearLayout>
+    </com.xi6666.store.custom.MonitorScrollView>
+
+</LinearLayout>

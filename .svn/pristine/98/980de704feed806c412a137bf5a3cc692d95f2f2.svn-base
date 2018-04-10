@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/divColor"
+              android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/ll_home_special_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_home_special"
+            android:layout_width="94dp"
+            android:layout_height="94dp"
+            android:background="@drawable/bg_image_default"/>
+
+        <TextView
+            android:id="@+id/txt_home_special_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:maxLength="7"
+            android:maxLines="1"
+            android:text="香百年"
+            android:textColor="@color/txtMineOrderTitle"
+            android:textSize="11sp"/>
+
+        <TextView
+            android:id="@+id/txt_home_special_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="4dp"
+            android:text="¥"
+            android:textColor="@color/txxtSettingSingout"
+            android:textSize="13sp"/>
+    </LinearLayout>
+
+
+</LinearLayout>

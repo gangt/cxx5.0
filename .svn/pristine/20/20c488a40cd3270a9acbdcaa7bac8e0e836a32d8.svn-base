@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="107dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rl_server_iconone"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                style="@style/gaosling_server_icon"
+                android:drawableTop="@drawable/gaoslin_icon1"
+                android:text="自动充值\n闪电到账"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_server_icontwo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                style="@style/gaosling_server_icon"
+                android:drawableTop="@drawable/gaoslin_icon2"
+                android:text="全程短信通知\n专业人工服务"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_server_iconthr"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/gaosling_server_tv"
+                style="@style/gaosling_server_icon"
+                android:drawableTop="@drawable/gaoslin_icon3"
+                android:text="协定存款\n银行专业保障"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

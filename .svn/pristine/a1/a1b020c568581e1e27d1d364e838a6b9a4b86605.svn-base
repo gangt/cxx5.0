@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@android:color/white"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp">
+
+        <TextView
+            android:id="@+id/txt_happybeans_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:text="2013-11-10"
+            android:textColor="@color/txtPhoneNum"
+            android:textSize="13sp"/>
+
+        <TextView
+            android:id="@+id/txt_happybeans_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="13dp"
+            android:layout_toRightOf="@id/txt_happybeans_time"
+            android:text="-10个"
+            android:textColor="@color/txtMineOrderTitle"
+            android:textSize="17sp"/>
+
+        <TextView
+            android:id="@+id/txt_happybeans_describe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_happybeans_num"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@id/txt_happybeans_time"
+            android:text="洗车喜豆支付"
+            android:textColor="@color/txtPhoneNum"
+            android:textSize="13sp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/divColor"/>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

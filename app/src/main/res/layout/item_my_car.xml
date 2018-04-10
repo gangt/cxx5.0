@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.daimajia.swipe.SwipeLayout
+        android:id="@+id/swipe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="9dp">
+
+        <!-- 这里面是侧滑功能 -->
+        <LinearLayout
+            android:id="@id/delete"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <!--  删除  -->
+            <TextView
+                android:layout_width="93dp"
+                android:layout_height="60dp"
+                android:background="@color/red_text"
+                android:gravity="center"
+                android:text="删除"
+                android:textColor="@color/whiteTextColor"
+                android:textSize="17sp" />
+
+        </LinearLayout>
+
+
+        <!-- 布局 -->
+        <include layout="@layout/include_car_details" />
+
+
+    </com.daimajia.swipe.SwipeLayout>
+
+</FrameLayout>

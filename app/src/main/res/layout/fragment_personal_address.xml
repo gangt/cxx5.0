@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <!-- 没有数据显示 -->
+        <LinearLayout
+            android:id="@+id/personal_address_not_ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="60dp"
+                android:src="@mipmap/ic_not_distribution_shop" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="未添加个人收货地址" />
+
+        </LinearLayout>
+
+
+        <!--    -->
+        <com.xi6666.view.superrecyclerview.XRecyclerView
+            android:id="@+id/personal_address_xrv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+    <View
+        style="@style/horizontal_view" />
+    <Button
+        android:id="@+id/personal_add_address_btn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:text="添加收货地址"
+        android:background="@color/text_green"/>
+
+
+</LinearLayout>

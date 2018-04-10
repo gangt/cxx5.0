@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.xi6666.view.EmptyLayout
+    android:id="@+id/emp_product_detial"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <WebView
+        android:id="@+id/wv_fragment_product_detial"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</com.xi6666.view.EmptyLayout>

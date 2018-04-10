@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="107dp"
+    android:background="@color/white"
+    android:layout_marginBottom="10dp"
+    android:orientation="vertical">
+
+
+    <!-- 默认地址 -->
+    <RadioButton
+        android:id="@+id/receipt_address_default_rb"
+        android:layout_width="29dp"
+        android:layout_height="29dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="9dp"
+        android:button="@null"
+        android:checked="false"
+        android:drawableLeft="@drawable/selector_car_info" />
+
+
+    <!-- 名字 -->
+    <TextView
+        android:id="@+id/receipt_address_name_tv"
+        android:layout_width="86dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="21dp"
+        android:layout_toRightOf="@+id/receipt_address_default_rb"
+        android:drawableLeft="@mipmap/ic_goods_consignee"
+        android:drawablePadding="9dp"
+        android:ellipsize="end"
+        android:lines="1"
+        android:text="孙先生孙先生孙先生孙先生孙先生"
+        android:textColor="@color/text_black"
+        android:textSize="13sp" />
+
+
+    <!-- 电话 -->
+    <TextView
+        android:id="@+id/receipt_address_tel_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/receipt_address_name_tv"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_toLeftOf="@+id/receipt_address_v"
+        android:layout_toRightOf="@+id/receipt_address_name_tv"
+        android:drawableLeft="@mipmap/ic_goods_phone"
+        android:drawablePadding="9dp"
+        android:text="13435352763"
+        android:textColor="@color/text_black" />
+
+    <!-- 收货地址 -->
+    <TextView
+        android:id="@+id/receipt_address_address_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/receipt_address_name_tv"
+        android:layout_below="@+id/receipt_address_name_tv"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_toLeftOf="@+id/receipt_address_v"
+        android:drawableLeft="@mipmap/ic_goods_address"
+        android:drawablePadding="9dp"
+        android:text="在你家隔壁那条小村的旁边路边我也不知道在哪里" />
+
+
+    <!-- 编辑  -->
+    <ImageView
+        android:id="@+id/receipt_address_edit_iv"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="16dp"
+        android:padding="10dp"
+        android:src="@mipmap/ic_goods_edit" />
+
+    <!--  分割线 -->
+    <View
+        android:id="@+id/receipt_address_v"
+        android:layout_width="1dp"
+        android:layout_height="58dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="14dp"
+        android:layout_toLeftOf="@+id/receipt_address_edit_iv"
+        android:background="@color/gray" />
+
+
+</RelativeLayout>

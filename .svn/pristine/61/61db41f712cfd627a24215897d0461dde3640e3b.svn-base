@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    android:orientation="vertical">
+
+
+    <!-- 标题栏 -->
+    <RelativeLayout
+        android:id="@+id/toolbar_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+
+        <!-- 标题栏内容 -->
+        <RelativeLayout
+            android:id="@+id/toolbar_rv"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:gravity="center_vertical">
+
+
+            <!-- 地址选择 -->
+            <TextView
+                android:id="@+id/store_address_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawablePadding="4dp"
+                android:drawableRight="@mipmap/ic_arrow_gray"
+                android:gravity="center"
+                android:paddingLeft="11dp"
+                android:text="未知"
+                android:textColor="@color/text_gray"
+                android:textSize="13sp" />
+
+
+            <!-- 标题栏 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="门店"
+                android:textColor="@color/text_black"
+                android:textSize="18sp" />
+
+
+            <!-- 筛选 -->
+            <ImageView
+                android:id="@+id/store_screen_iv"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="7dp"
+                android:src="@mipmap/ic_screen_gary" />
+
+            <!-- 搜索 -->
+            <ImageView
+                android:id="@+id/store_query_iv"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="7dp"
+                android:layout_toLeftOf="@id/store_screen_iv"
+                android:src="@mipmap/ic_query_gray" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/toolbar_rv"
+            android:background="@color/gray" />
+
+    </RelativeLayout>
+
+
+    <!-- 没有网络加载页面 -->
+    <com.xi6666.carWash.base.view.CxxErrorView
+        android:id="@+id/store_error_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <!-- tab 切换 -->
+    <android.support.design.widget.TabLayout
+        android:id="@+id/store_tab"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="@color/white"
+        android:paddingTop="10dp"
+        app:tabGravity="center"
+        app:tabIndicatorColor="@color/text_green"
+        app:tabSelectedTextColor="@color/text_green"
+        app:tabTextColor="@color/text_gray" />
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/store_vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="8dp" />
+
+</LinearLayout>

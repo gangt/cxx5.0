@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@android:color/transparent"
+                android:layout_gravity="bottom">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:gravity="center"
+        android:text="确定删除选中的商品吗？"
+        android:textSize="16sp"
+        android:textColor="@color/black_text"
+        android:background="@color/whiteTextColor"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e2e2e2"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/whiteTextColor"
+        android:orientation="vertical">
+    <Button
+        android:id="@+id/tv_delete_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center_horizontal"
+        android:text="删除"
+        android:textSize="16sp"
+        android:background="@color/whiteTextColor"
+        android:textColor="@color/red_text"/>
+    <Button
+        android:id="@+id/tv_cancel_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:background="@color/whiteTextColor"
+        android:layout_gravity="center_horizontal"
+        android:text="取消"
+        android:textSize="16sp"
+        android:textColor="@color/black_text"/>
+    </LinearLayout>
+
+</LinearLayout>

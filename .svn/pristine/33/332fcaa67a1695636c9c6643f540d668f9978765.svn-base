@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+
+    <!--&lt;!&ndash; 全部评价  &ndash;&gt;-->
+    <!--<TextView-->
+    <!--android:id="@+id/view_evaluation_type_whole_tv"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@drawable/bg_radius_orange"-->
+    <!--android:paddingBottom="6dp"-->
+    <!--android:paddingLeft="8dp"-->
+    <!--android:paddingRight="8dp"-->
+    <!--android:paddingTop="6dp"-->
+    <!--android:tag="0"-->
+    <!--android:text="全部300"-->
+    <!--android:textColor="#f7bf47"-->
+    <!--android:textSize="12sp" />-->
+
+    <!--&lt;!&ndash; 好评  &ndash;&gt;-->
+    <!--<TextView-->
+    <!--android:id="@+id/view_evaluation_type_good_tv"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="15dp"-->
+    <!--android:background="@drawable/bg_radius_gray"-->
+    <!--android:paddingBottom="6dp"-->
+    <!--android:paddingLeft="8dp"-->
+    <!--android:paddingRight="8dp"-->
+    <!--android:paddingTop="6dp"-->
+    <!--android:tag="1"-->
+    <!--android:text="好评300"-->
+    <!--android:textColor="@color/text_gray"-->
+    <!--android:textSize="12sp" />-->
+
+
+    <!--&lt;!&ndash; 中评 &ndash;&gt;-->
+    <!--<TextView-->
+    <!--android:id="@+id/view_evaluation_type_commonly_tv"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="15dp"-->
+    <!--android:background="@drawable/bg_radius_gray"-->
+    <!--android:paddingBottom="6dp"-->
+    <!--android:paddingLeft="8dp"-->
+    <!--android:paddingRight="8dp"-->
+    <!--android:paddingTop="6dp"-->
+    <!--android:tag="2"-->
+    <!--android:text="中评100"-->
+    <!--android:textColor="@color/text_gray"-->
+    <!--android:textSize="12sp" />-->
+
+
+    <!--&lt;!&ndash; 差评 &ndash;&gt;-->
+    <!--<TextView-->
+    <!--android:id="@+id/view_evaluation_type_difference_tv"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="15dp"-->
+    <!--android:background="@drawable/bg_radius_gray"-->
+    <!--android:paddingBottom="6dp"-->
+    <!--android:paddingLeft="8dp"-->
+    <!--android:paddingRight="8dp"-->
+    <!--android:paddingTop="6dp"-->
+    <!--android:tag="1"-->
+    <!--android:text="差评50"-->
+    <!--android:textColor="@color/text_gray"-->
+    <!--android:textSize="12sp" />-->
+
+
+    <!-- 全部评价 -->
+    <TextView
+        android:id="@+id/view_evaluation_type_whole_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:lineSpacingExtra="8dp"
+        android:tag="0"
+        android:text="全部评价\n0"
+        android:textColor="#f7bf47"
+        android:textSize="12sp" />
+    <!-- 好评 -->
+    <TextView
+        android:id="@+id/view_evaluation_type_good_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:lineSpacingExtra="8dp"
+        android:tag="1"
+        android:text="好评\n0"
+        android:textColor="@color/text_gray"
+        android:textSize="12sp" />
+    <!-- 中评 -->
+    <TextView
+        android:id="@+id/view_evaluation_type_commonly_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:lineSpacingExtra="8dp"
+        android:tag="2"
+        android:text="中评\n0"
+        android:textColor="@color/text_gray"
+        android:textSize="12sp" />
+    <!-- 全部评价 -->
+    <TextView
+        android:id="@+id/view_evaluation_type_difference_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:lineSpacingExtra="8dp"
+        android:tag="3"
+        android:text="差评\n0"
+        android:textColor="@color/text_gray"
+        android:textSize="12sp" />
+</LinearLayout>

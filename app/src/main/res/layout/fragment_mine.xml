@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_mine_top"
+            android:scaleType="fitXY"
+            >
+
+            <ImageView
+                android:id="@+id/iv_mine_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="26dp"
+                android:src="@drawable/ic_mine_setting"/>
+
+            <ImageView
+                android:id="@+id/iv_mine_bell"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="26dp"
+                android:src="@drawable/ic_mine_bell"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_mine_setting"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:id="@+id/iv_mine_head"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:src="@drawable/ic_mine_head"/>
+
+                <Button
+                    android:id="@+id/btn_mine_sign"
+                    android:layout_width="58dp"
+                    android:layout_height="28dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="14dp"
+                    android:layout_toRightOf="@id/iv_mine_head"
+                    android:background="@drawable/bg_mine_sign"
+                    android:text="登录"
+                    android:textColor="@android:color/white"
+                    android:textSize="11sp"
+
+                    />
+
+                <RelativeLayout
+                    android:id="@+id/rll_mine_users"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/iv_mine_head"
+                    android:visibility="gone"
+                    >
+
+                    <TextView
+                        android:id="@+id/txt_mine_usename"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="用户名"
+
+                        android:textColor="@android:color/white"
+                        android:textSize="17sp"/>
+
+                    <TextView
+                        android:id="@+id/txt_mine_nickname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_mine_usename"
+                        android:layout_marginTop="6dp"
+                        android:text="ksda"
+                        android:textColor="@android:color/white"
+                        android:textSize="13sp"
+                        android:visibility="gone"/>
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="132dp"
+            android:background="@color/themeColor">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="132dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/bg_mine_order">
+
+                <TextView
+                    android:id="@+id/txt_mine_order_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="24dp"
+                    android:text="我的卡包"
+                    android:textColor="@color/txtMineOrderTitle"
+                    android:textSize="15dp"/>
+
+                <TextView
+                    android:id="@+id/txt_mine_order_goods"
+                    android:layout_width="67dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_mine_order_title"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="13dp"
+                    android:drawablePadding="5dp"
+                    android:drawableTop="@drawable/ic_mine_addoil"
+                    android:gravity="center"
+                    android:paddingRight="3dp"
+                    android:paddingTop="3dp"
+                    android:text="加油卡"
+                    android:textColor="@color/txtMineOrderDefault"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:id="@+id/txt_mine_order_clean"
+
+                    android:layout_width="67dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_mine_order_title"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="13dp"
+                    android:drawablePadding="5dp"
+                    android:drawableTop="@drawable/ic_mine_cleancar"
+                    android:gravity="center"
+                    android:paddingRight="3dp"
+                    android:paddingTop="3dp"
+                    android:text="洗车卡"
+                    android:textColor="@color/txtMineOrderDefault"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:id="@+id/txt_mine_order_server"
+                    android:layout_width="67dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/txt_mine_order_title"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginTop="13dp"
+                    android:drawablePadding="5dp"
+                    android:drawableTop="@drawable/ic_mine_discount"
+                    android:gravity="center"
+                    android:paddingRight="3dp"
+                    android:paddingTop="3dp"
+                    android:text="优惠券"
+                    android:textColor="@color/txtMineOrderDefault"
+                    android:textSize="13sp"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="11dp"
+            android:background="@color/txtMineDiv"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_main_order"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@android:color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:text="我的订单"
+                android:textColor="@color/txtMineOrderTitle"
+                android:textSize="15sp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="12dp"
+                android:src="@drawable/ic_mine_order_arrow"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divColor"/>
+
+        <RelativeLayout
+            android:id="@+id/rll_mine_shoppingcar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@android:color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:text="我的购物车"
+                android:textColor="@color/txtMineOrderTitle"
+                android:textSize="15sp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="12dp"
+                android:src="@drawable/ic_mine_order_arrow"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="11dp"
+            android:background="@color/txtMineDiv"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:background="@android:color/white">
+
+            <com.xi6666.view.MesureGrideView
+                android:id="@+id/mgv_mine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="28dp"
+                android:layout_marginTop="13dp"
+
+                android:numColumns="4"
+                android:verticalSpacing="15dp"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="11dp"
+            android:background="@color/txtMineDiv"/>
+    </LinearLayout>
+</ScrollView>

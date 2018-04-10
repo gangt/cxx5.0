@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/popop_store_screen_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#58000000"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/toolbar_view"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize" />
+
+
+    <LinearLayout
+        android:layout_below="@+id/toolbar_view"
+        android:paddingTop="7dp"
+        android:layout_marginRight="8dp"
+        android:background="@mipmap/bg_screen"
+        android:layout_marginTop="-15dp"
+        android:layout_alignParentRight="true"
+        android:layout_width="96dp"
+        android:orientation="vertical"
+        android:layout_height="132dp">
+        <!--  距离优先 -->
+        <TextView
+            android:id="@+id/popop_store_screen_distance_tv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textColor="@color/text_green"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:text="距离优先"/>
+
+        <View
+            android:layout_width="96dp"
+            android:layout_height="1dp"
+            android:background="@color/gray" />
+
+        <!--  评分优先  -->
+        <TextView
+            android:id="@+id/popop_store_screen_score_tv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textColor="@color/text_black"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:text="评分优先"/>
+        <View
+            android:layout_width="96dp"
+            android:layout_height="1dp"
+            android:background="@color/gray" />
+
+        <!--  人气优先 -->
+        <TextView
+            android:id="@+id/popop_store_screen_popularity_tv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textColor="@color/text_black"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:text="人气优先"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

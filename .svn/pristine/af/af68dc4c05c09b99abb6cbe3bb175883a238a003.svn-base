@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:id="@+id/activity_setting"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/txtMineDiv"
+    android:scrollbars="none"
+    tools:context="com.xi6666.userdata.view.UserDataAct">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rll_setting_head"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:text="头像"
+                android:textColor="@color/txtMineOrderTitle"
+                android:textSize="15sp"/>
+
+
+            <ImageView
+                android:id="@+id/iv_setting_arraw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="11dp"
+                android:src="@drawable/ic_mine_order_arrow"/>
+
+            <ImageView
+                android:id="@+id/iv_setting_head"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:layout_toLeftOf="@id/iv_setting_arraw"
+                android:src="@drawable/ic_mine_head"/>
+        </RelativeLayout>
+
+        <include
+            layout="@layout/include_div_rope"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:background="@android:color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:text="手机号"
+                android:textColor="@color/txtMineOrderTitle"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/tv_setting_phonenum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="120dp"
+
+                android:background="@null"
+                android:inputType="number"
+                android:text="哈哈"
+                android:textColor="@color/txtPhoneNum"
+                android:textSize="15sp"/>
+
+
+        </RelativeLayout>
+
+        <include
+            layout="@layout/include_div_rope"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:background="@android:color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:text="昵称"
+                android:textColor="@color/txtMineOrderTitle"
+                android:textSize="15sp"/>
+
+            <EditText
+                android:id="@+id/etxt_setting_username"
+                android:layout_width="160dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="120dp"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:maxLength="11"
+                android:text="用户名"
+                android:textColor="@color/txtPhoneNum"
+                android:textSize="15sp"/>
+        </RelativeLayout>
+
+        <include
+            layout="@layout/include_div_rope"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            />
+
+        <RelativeLayout
+            android:id="@+id/rll_setting_gender"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:background="@android:color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:text="性别"
+                android:textColor="@color/txtMineOrderTitle"
+                android:textSize="15sp"/>
+
+
+            <TextView
+                android:id="@+id/txt_setting_gender"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="120dp"
+                android:layout_marginRight="10dp"
+                android:drawablePadding="8dp"
+                android:drawableRight="@drawable/ic_mine_order_arrow"
+                android:gravity="center_vertical"
+                android:text="男"
+                android:textColor="@color/txtPhoneNum"
+                android:textSize="15sp"
+
+                />
+
+        </RelativeLayout>
+
+        <include
+            layout="@layout/include_div_rope"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            />
+
+        <RelativeLayout
+            android:id="@+id/rll_setting_brithday"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:background="@android:color/white">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:text="生日"
+                android:textColor="@color/txtMineOrderTitle"
+                android:textSize="15sp"/>
+            <!--
+                        <ImageView
+                            android:id="@+id/iv_setting_arraw_brithday"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="11dp"
+                            android:src="@drawable/ic_mine_order_arrow"/>-->
+
+            <TextView
+                android:id="@+id/txt_setting_brithday"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+
+                android:layout_marginLeft="120dp"
+                android:layout_marginRight="12dp"
+                android:drawableRight="@drawable/ic_mine_order_arrow"
+                android:gravity="center_vertical"
+                android:text="20125"
+                android:textColor="@color/txtPhoneNum"
+                android:textSize="15sp"/>
+
+        </RelativeLayout>
+
+        <include
+            layout="@layout/include_div_rope"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            />
+
+        <RelativeLayout
+            android:id="@+id/rll_setting_address"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:background="@android:color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:text="地址管理"
+                android:textColor="@color/txtMineOrderTitle"
+                android:textSize="15sp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="11dp"
+                android:src="@drawable/ic_mine_order_arrow"/>
+        </RelativeLayout>
+
+        <include
+            layout="@layout/include_div_rope"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+        <ImageView
+            android:id="@+id/iv_setting_code"
+            android:layout_width="104dp"
+            android:layout_height="104dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="85dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="14dp"
+            android:text="邀请好友,分享二维码"
+            android:textSize="12sp"/>
+
+    </LinearLayout>
+</ScrollView>

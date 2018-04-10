@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/ll_reload_data"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+    android:background="#dce0df">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="70dp"
+        android:src="@drawable/ic_error"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="网络请求失败"
+        android:layout_marginTop="18dp"
+        android:textColor="#b2b2b2"
+        android:textSize="16sp"
+        android:layout_gravity="center_horizontal"/>
+
+    <Button
+        android:id="@+id/btn_reload_data"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:text="重新加载"
+        android:layout_marginTop="25dp"
+        android:textSize="16sp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/themeColor"
+        android:background="@drawable/go_pingjia_bg"/>
+</LinearLayout>

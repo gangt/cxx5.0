@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <!-- 全部评价  -->
+    <TextView
+        android:id="@+id/view_evaluation_type_whole_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_radius_orange"
+        android:paddingBottom="6dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="6dp"
+        android:tag="1"
+        android:text="洗车"
+        android:textColor="#f7bf47"
+        android:textSize="12sp" />
+
+    <!-- 好评  -->
+    <TextView
+        android:id="@+id/view_evaluation_type_good_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:background="@drawable/bg_radius_gray"
+        android:paddingBottom="6dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="6dp"
+        android:tag="3"
+        android:text="美容"
+        android:textColor="@color/text_gray"
+        android:textSize="12sp" />
+
+
+    <!-- 中评 -->
+    <TextView
+        android:id="@+id/view_evaluation_type_commonly_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:background="@drawable/bg_radius_gray"
+        android:paddingBottom="6dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="6dp"
+        android:tag="2"
+        android:text="保养"
+        android:textColor="@color/text_gray"
+        android:textSize="12sp" />
+
+
+    <!-- 差评 -->
+    <TextView
+        android:id="@+id/view_evaluation_type_difference_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:background="@drawable/bg_radius_gray"
+        android:paddingBottom="6dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="6dp"
+        android:tag="4"
+        android:text="违章处理"
+        android:textColor="@color/text_gray"
+        android:textSize="12sp" />
+</LinearLayout>

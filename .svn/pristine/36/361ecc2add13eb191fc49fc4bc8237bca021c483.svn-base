@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <EditText
+            android:id="@+id/et_accountlogin_account"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="19dp"
+            android:layout_marginRight="17dp"
+            android:background="@null"
+            android:drawableLeft="@drawable/ic_login_user"
+            android:drawablePadding="11dp"
+            android:hint="请输入账号"
+            android:textColor="@color/addOillight"
+            android:textColorHint="@color/addOillight"
+            android:textCursorDrawable="@null"
+            android:textSize="15sp"
+            />
+
+        <ImageView
+            android:id="@+id/et_accountlogin_clean"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="17dp"
+            android:src="@drawable/ic_login_clean"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginRight="11dp"
+        android:background="@color/divColor"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <EditText
+            android:id="@+id/et_accountlogin_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="19dp"
+            android:layout_marginRight="17dp"
+            android:background="@null"
+            android:drawableLeft="@drawable/ic_login_pwd"
+            android:drawablePadding="11dp"
+            android:hint="请输入密码"
+            android:password="true"
+            android:textColor="@color/addOillight"
+            android:textColorHint="@color/addOillight"
+            android:textCursorDrawable="@null"
+            android:textSize="15sp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="11dp"
+            android:layout_marginRight="11dp"
+            android:background="@color/divColor"
+            />
+    </RelativeLayout>
+</LinearLayout>

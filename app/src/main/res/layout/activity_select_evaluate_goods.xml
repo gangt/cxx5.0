@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_select_evaluate_goods"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#dce0df"
+    tools:context="com.xi6666.order.activity.SelectEvaluateGoodsActivity">
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/layout_error_retry"/>
+
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_marginTop="11dp"
+        android:paddingBottom="20dp"
+        android:divider="#dce0df"
+        android:dividerHeight="11dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </ListView>
+
+</LinearLayout>

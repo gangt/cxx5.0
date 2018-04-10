@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:paddingBottom="15dp"
+              android:background="@color/whiteTextColor"
+              android:paddingLeft="12dp"
+              android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_order_details_goods_img"
+        android:layout_marginTop="14dp"
+        android:layout_width="86dp"
+        android:layout_height="86dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/no_data_empty"/>
+
+    <LinearLayout
+        android:layout_marginTop="14dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_order_details_goods_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="33dp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:text="爱打架了大家拉到就垃圾大连交大路啊大大啊大大"
+            android:textSize="15sp"
+            android:textColor="#121212"/>
+
+        <TextView
+            android:id="@+id/tv_order_details_new_person"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text=""
+            android:textColor="#f53825"
+            android:textSize="14sp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_order_details_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#929292"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/tv_order_details_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#929292"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp">
+            <TextView
+                android:id="@+id/tv_order_details_goods_xi_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#f53825"
+                android:textSize="18sp"
+                android:text="¥299.00"/>
+
+            <TextView
+                android:id="@+id/tv_order_details_goods_menshi_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#929292"
+                android:layout_toRightOf="@id/tv_order_details_goods_xi_price"
+                android:textSize="16sp"
+                android:layout_marginLeft="8dp"
+                android:layout_centerVertical="true"
+                android:text="¥399.00"/>
+
+            <TextView
+                android:id="@+id/tv_order_details_goods_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:textColor="#121212"
+                android:textSize="14sp"
+                android:text="x1"/>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

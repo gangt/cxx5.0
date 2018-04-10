@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.xi6666.libray.widget.HeaderViewPager
+        android:id="@+id/store_hvp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:hvp_topOffset="50dp">
+
+        <!-- banner图 -->
+        <com.bigkoo.convenientbanner.ConvenientBanner xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/carWash_banner_cb"
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            app:canLoop="false" />
+
+
+        <!-- tab -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- 第一个Tab -->
+            <com.xi6666.carWash.view.custom.SortTabView
+                android:id="@+id/carWash_tab_one"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:tab_icon_hidden="true"
+                app:tab_select="true"
+                app:tab_title="从近到远" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="19dp"
+                android:background="@color/gray" />
+
+
+            <!-- 第二个Tab -->
+            <com.xi6666.carWash.view.custom.SortTabView
+                android:id="@+id/carWash_tab_two"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:tab_select="false"
+                app:tab_sort="true"
+                app:tab_title="价格" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="19dp"
+                android:background="@color/gray" />
+
+
+            <!-- 第三个Tab -->
+            <com.xi6666.carWash.view.custom.SortTabView
+                android:id="@+id/carWash_tab_three"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:tab_select="false"
+                app:tab_icon_hidden="true"
+                app:tab_title="评分" />
+        </LinearLayout>
+
+        <com.xi6666.carWash.base.view.CxxNotView
+            android:id="@+id/carWash_not_view"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="match_parent"
+            app:text="附近没有可服务门店"/>
+
+        <FrameLayout
+            android:id="@+id/carWash_fl"
+            android:layout_width="match_parent"
+            android:visibility="visible"
+            android:layout_height="match_parent"
+            android:paddingTop="10dp" />
+
+
+        <!-- 网络错误加载 -->
+        <com.xi6666.carWash.base.view.CxxErrorView
+            android:id="@+id/carWash_error_view"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="400dp" />
+
+
+    </com.xi6666.libray.widget.HeaderViewPager>
+
+
+</FrameLayout>

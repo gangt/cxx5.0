@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+    <com.xi6666.view.EmptyLayout
+        android:id="@+id/empt_illagecardbag"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="40dp">
+
+        <com.xi6666.view.superrecyclerview.XRecyclerView
+            android:id="@+id/xrec_illagecardbag"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+    </com.xi6666.view.EmptyLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/btn_illagecardbag_redeemcode"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:text="兑换码"
+            android:textColor="@color/themeColor"
+            android:textSize="15sp"/>
+
+        <Button
+            android:id="@+id/btn_illagecardbag_buy"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/themeColor"
+            android:text="购买违章卡"
+            android:textColor="@android:color/white"
+            android:textSize="15sp"/>
+    </LinearLayout>
+
+</RelativeLayout>

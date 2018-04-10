@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_my_collection"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#dce0df"
+    tools:context="com.xi6666.evaluate.activity.MyCollectionActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/mc_tb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/whiteTextColor"
+        android:fitsSystemWindows="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_mc_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/back_black"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="我的收藏"
+                android:textColor="@color/black_text"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/tv_mc_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:text="编辑"
+                android:textColor="@color/gray_text"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tv_mc_done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:text="取消"
+                android:textColor="@color/gray_text"
+                android:textSize="16sp"
+                android:visibility="gone"/>
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <include
+        android:layout_below="@id/mc_tb"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        layout="@layout/layout_error_retry"/>
+
+    <com.xi6666.view.superrecyclerview.XRecyclerView
+        android:id="@+id/mc_xRecyclerView"
+        android:layout_below="@id/mc_tb"
+        android:layout_marginTop="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </com.xi6666.view.superrecyclerview.XRecyclerView>
+
+    <TextView
+        android:id="@+id/mc_tv_no_goods"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="#626262"
+        android:visibility="gone"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:text="暂无收藏商品"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_mc_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:visibility="gone"
+        android:background="@color/whiteTextColor"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerVertical="true">
+            
+            <CheckBox
+                android:id="@+id/mc_bottom_cb"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:button="@null"
+                android:checked="false"
+                android:background="@drawable/selector_car_info"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="全选"
+                android:textSize="18sp"
+                android:textColor="@color/light_gray_text"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_mc_bottom_delete"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:text="删除"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:layout_marginRight="15dp"
+            android:textColor="@color/red_text"
+            android:textSize="18sp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

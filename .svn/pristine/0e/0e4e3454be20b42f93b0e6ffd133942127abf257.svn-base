@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="111dp"
+    android:background="@color/white">
+
+    <!-- 图片 -->
+    <ImageView
+        android:id="@+id/mall_home_item_img"
+        android:layout_width="101dp"
+        android:layout_height="101dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="5dp"
+        android:scaleType="fitXY" />
+
+    <!-- 标题-->
+    <TextView
+        android:id="@+id/mall_home_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="23dp"
+        android:layout_marginTop="11dp"
+        android:layout_toRightOf="@+id/mall_home_item_img"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="个人公众号Ardays"
+        android:textColor="@color/text_black"
+        android:textSize="15sp" />
+
+    <!-- 价格-->
+    <TextView
+        android:id="@+id/moeny_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        android:layout_toRightOf="@+id/mall_home_item_img"
+        android:text="小喜价:"
+        android:textColor="@color/red_text" />
+
+    <!-- 价格-->
+    <TextView
+        android:id="@+id/mall_home_item_moeny"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="84dp"
+        android:layout_toRightOf="@+id/moeny_tv"
+        android:text="¥500"
+        android:textColor="@color/text_orange" />
+
+
+    <TextView
+        android:id="@+id/mall_home_item_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="84dp"
+        android:text="254人购买"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+
+    <View
+        style="@style/horizontal_view"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/mall_home_item_img" />
+
+
+</RelativeLayout>

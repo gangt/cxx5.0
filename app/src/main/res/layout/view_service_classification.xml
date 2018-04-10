@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="13dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+        <!--    标题      -->
+        <TextView
+            android:id="@+id/service_classification_title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:background="#f2f5f2"
+            android:gravity="center"
+            android:text="美容清洗"
+            android:textColor="@color/text_black"
+            android:textSize="15sp" />
+
+
+        <!-- 列表 -->
+        <com.xi6666.classification.view.custom.TagCloudView
+            android:id="@+id/service_classification_tcv"
+            app:tcvBorder="8dp"
+            app:tcvBorderItem="8dp"
+            app:tcvCanTagClick="true"
+            app:tcvItemBorderHorizontal="16dp"
+            app:tcvItemBorderVertical="14dp"
+            app:tcvTextColor="@color/text_gray"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="14dp" />
+
+    </LinearLayout>

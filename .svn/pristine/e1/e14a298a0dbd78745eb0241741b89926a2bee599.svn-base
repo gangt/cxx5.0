@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 标题 -->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:fitsSystemWindows="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/toolbar_left_iv"
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:text="取消"
+                android:textColor="@color/text_black"
+                android:textSize="13sp"
+                />
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="添加爱车"
+                android:textColor="@color/text_black"
+                android:textSize="20sp"/>
+            <TextView
+                android:id="@+id/toolbar_right_iv"
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16dp"
+                android:text="保存"
+                android:textColor="@color/text_black"
+                android:textSize="13sp"
+                />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <View
+        android:visibility="gone"
+        style="@style/horizontal_view" />
+
+    <!-- -->
+    <include layout="@layout/include_car_details"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:gravity="left|center"
+        android:paddingLeft="16dp"
+        android:textSize="11sp"
+        android:textColor="#959595"
+        android:text="您已经成功添加爱车，完善以下资料更方面管理哦"
+        android:layout_height="29dp" />
+
+    <LinearLayout
+        android:background="@color/whiteTextColor"
+        android:paddingLeft="17dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!-- 车牌号 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="left|center"
+            android:layout_height="52dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_gray"
+                android:textSize="15sp"
+                android:text="车牌号码"/>
+
+
+            <!-- 这里是选择粤-->
+            <LinearLayout
+                android:id="@+id/add_car_select_province"
+                android:layout_marginLeft="46dp"
+                android:layout_width="46dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_height="40dp">
+
+                <TextView
+                    android:id="@+id/add_province_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_gray"
+                    android:textSize="15sp"
+                    android:text="粤"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@mipmap/icon_bottom_right_corner_triangle"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_marginLeft="10dp"
+                android:layout_width="1dp"
+                android:layout_height="40dp"
+                android:background="@color/gray"/>
+
+            <EditText
+                android:id="@+id/add_province_car_tv"
+                android:layout_marginLeft="10dp"
+                android:background="@null"
+                android:hint="请输入车牌号码"
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:textColor="@color/text_gray"
+                android:layout_height="wrap_content" />
+
+
+
+
+        </LinearLayout>
+
+        <View
+            style="@style/horizontal_view"/>
+
+
+        <!-- 行驶距离 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="left|center"
+            android:layout_height="52dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_gray"
+                android:textSize="15sp"
+                android:text="当前行驶里程"/>
+
+            <EditText
+                android:id="@+id/add_province_road_tv"
+                android:layout_marginLeft="10dp"
+                android:background="@null"
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:maxWidth="200dp"
+                android:textColor="@color/text_gray"
+                android:hint="请输入行驶里程数"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(km)"/>
+
+        </LinearLayout>
+
+        <View style="@style/horizontal_view"/>
+
+
+        <!-- 爱车上路事件 -->
+        <LinearLayout
+            android:id="@+id/add_province_time_ll"
+            android:layout_width="match_parent"
+            android:gravity="left|center"
+            android:layout_height="52dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_gray"
+                android:textSize="15sp"
+                android:text="爱车上路时间"/>
+
+            <TextView
+                android:id="@+id/add_province_time_tv"
+                android:layout_marginLeft="10dp"
+                android:background="@null"
+                android:textSize="14sp"
+                android:layout_width="200dp"
+                android:textColor="@color/text_gray"
+                android:hint="请选择爱车上路时间"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <View
+            style="@style/horizontal_view" />
+        <CheckBox
+            android:layout_marginTop="10dp"
+            android:id="@+id/add_province_default_ck"
+            android:drawableLeft="@drawable/ic_car_wars"
+            android:button="@null"
+            android:checked="true"
+            android:drawablePadding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="设置默认爱车"/>
+    </LinearLayout>
+
+</LinearLayout>

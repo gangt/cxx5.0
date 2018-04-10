@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/gray">
+
+
+    <!-- 店面内容 -->
+
+
+    <RelativeLayout
+        android:id="@+id/view_store_evaluate_body"
+        android:layout_width="337dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@mipmap/bg_store_evaluate">
+
+
+        <!-- 评论 -->
+        <TextView
+            android:id="@+id/view_store_evaluate_comment_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="44dp"
+            android:ellipsize="end"
+            android:text=""
+            android:textColor="@color/text_black"
+            android:textSize="13sp" />
+
+
+        <!-- 评分 -->
+        <com.xi6666.store.custom.EvaluateBar
+            android:id="@+id/view_store_evaluate_level_eb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="16dp"
+            app:starCount="5"
+            app:starDistance="1dp"
+            app:starEmpty="@mipmap/ic_border_star_select"
+            app:starFill="@mipmap/ic_border_star_selected"
+            app:starMark="4"
+            app:starSize="11dp"
+            app:touch="false" />
+
+
+        <!-- 买家晒图 -->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/view_store_evaluate_image_rv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view_store_evaluate_comment_tv"
+            android:layout_centerHorizontal="true" />
+
+
+        <!-- 电话号码    时间    点赞-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view_store_evaluate_image_rv"
+            android:layout_marginTop="19dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="6dp">
+
+
+            <!-- 电话号码 -->
+            <TextView
+                android:id="@+id/view_store_evaluate_tel_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="134****2763"
+                android:textColor="#b2b2b2"
+                android:textSize="13sp" />
+
+            <!-- 点赞 -->
+            <CheckBox
+                android:id="@+id/view_store_evaluate_fabulous_ck"
+                android:layout_width="29dp"
+                android:layout_height="29dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="1dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/ic_fabulous" />
+
+            <!-- 时间文本 -->
+            <TextView
+                android:id="@+id/view_store_evaluate_time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/view_store_evaluate_fabulous_ck"
+                android:text="2016-11-08   17:04"
+                android:textColor="#b2b2b2" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <!-- 标签 -->
+    <ImageView
+        android:id="@+id/view_store_evaluate_type_iv"
+        android:layout_width="64dp"
+        android:layout_height="23dp"
+        android:layout_alignLeft="@+id/view_store_evaluate_body"
+        android:layout_alignTop="@+id/view_store_evaluate_body"
+        android:layout_marginLeft="-3dp"
+        android:layout_marginTop="11dp"
+        android:src="@mipmap/ic_store_evaluate_carwash_label_iv" />
+</RelativeLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+    <!-- 洗车卡-->
+    <com.xi6666.carWash.view.custom.CashierPayViewTwo
+        android:id="@+id/cashier_card_cpv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        app:cashierTitle="选择优惠方式"/>
+
+    <!-- 支付方式-->
+    <com.xi6666.carWash.view.custom.CashierPayView
+        android:id="@+id/cashier_pay_cpv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cashier_card_cpv"
+        android:layout_marginTop="10dp"
+        app:cashierItemType="Pay"
+        app:cashierTitle="选择支付方式"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cashier_pay_cpv"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="11dp"
+        android:visibility="gone"
+        android:text="*洗车卡每周限用一次，单次抵扣金额不超过40元，适用于普通洗车"
+        android:textSize="12sp"/>
+
+
+    <!-- 确定支付 -->
+    <Button
+        android:id="@+id/cashier_pay_commit_pay_btn"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/text_green"
+        android:gravity="center"
+        android:text="确认支付"
+        android:textColor="@color/white"
+        android:textSize="18sp"/>
+
+</RelativeLayout>

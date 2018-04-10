@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:stars="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_goods_evaluate"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#dce0df"
+    android:orientation="vertical"
+    tools:context="com.xi6666.order.activity.GoodsEvaluateActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="11dp"
+        android:background="@color/whiteTextColor"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_evaluate_goods_img"
+                android:layout_width="86dp"
+                android:layout_height="86dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="12dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/no_data_empty"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="评分"
+                    android:textColor="#121212"
+                    android:textSize="16sp"/>
+
+                <com.xi6666.evaluate.other.EvaluateBar
+                    android:id="@+id/evaluate_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    stars:starCount="5"
+                    stars:starSize="25dp"
+                    stars:starDistance="5dp"
+                    stars:starEmpty="@drawable/star_unselected"
+                    stars:starFill="@drawable/star_selected"
+                    android:layout_marginTop="20dp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical"
+            android:layout_below="@+id/ll_top_half"
+            android:background="@drawable/edittext_bg">
+
+            <EditText
+                android:id="@+id/et_evaluate_desc"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:hint="写下购买或使用体验，给其他小伙伴提供参考建议"
+                android:textColorHint="#c2c2c2"
+                android:layout_marginTop="15dp"
+                android:gravity="top|left"
+                android:background="@null"
+                android:textColor="#121212"
+                android:textSize="16sp"
+                android:maxLines="5"
+                android:maxLength="100"/>
+
+            <TextView
+                android:id="@+id/tv_input_num_evaluate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:gravity="right"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:textColor="#c2c2c2"
+                android:text="0/100"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:orientation="vertical"
+        android:layout_marginTop="11dp"
+        android:paddingLeft="15dp"
+        android:background="@color/whiteTextColor">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="上传图片(最多可上传5张)"
+            android:textColor="#121212"
+            android:textSize="16sp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#e2e2e2"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/fl_add_img1"
+                 android:layout_width="55dp"
+                 android:layout_height="45dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/iv_add_img1"
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"/>
+
+                <ImageView
+                    android:id="@+id/iv_cha1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="right"
+                    android:src="@drawable/cha_icon"/>
+
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/fl_add_img2"
+                 android:layout_width="55dp"
+                 android:layout_height="45dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/iv_add_img2"
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"/>
+
+                <ImageView
+                    android:id="@+id/iv_cha2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="right"
+                    android:src="@drawable/cha_icon"/>
+
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/fl_add_img3"
+                 android:layout_width="55dp"
+                 android:layout_height="45dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/iv_add_img3"
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"/>
+
+                <ImageView
+                    android:id="@+id/iv_cha3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="right"
+                    android:src="@drawable/cha_icon"/>
+
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/fl_add_img4"
+                 android:layout_width="55dp"
+                 android:layout_height="45dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/iv_add_img4"
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"/>
+
+                <ImageView
+                    android:id="@+id/iv_cha4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="right"
+                    android:src="@drawable/cha_icon"/>
+
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/fl_add_img5"
+                 android:layout_width="55dp"
+                 android:layout_height="45dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/iv_add_img5"
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"/>
+
+                <ImageView
+                    android:id="@+id/iv_cha5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="right"
+                    android:src="@drawable/cha_icon"/>
+
+            </FrameLayout>
+
+
+            <ImageView
+                android:id="@+id/iv_add_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/add_img"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_niming_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp">
+        <CheckBox
+            android:id="@+id/cb_niming_comment"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="2dp"
+            android:button="@null"
+            android:background="@drawable/niming_selector"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="16sp"
+            android:layout_marginLeft="5dp"
+            android:textColor="#959595"
+            android:text="匿名评论"/>
+    </LinearLayout>
+
+</LinearLayout>

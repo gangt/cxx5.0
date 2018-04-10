@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <!-- 身体 -->
+    <LinearLayout
+        android:id="@+id/toolbar_body"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:background="#dce0df"
+        android:orientation="vertical"
+        android:visibility="gone" />
+
+
+    <!-- 侵入式布局 -->
+    <LinearLayout
+        android:id="@+id/toolbar_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#dce0df"
+        android:orientation="vertical"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/toolbar_rv"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="@color/white">
+
+            <!-- 左按钮 -->
+            <ImageView
+                android:id="@+id/toolbar_left_iv"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:padding="8dp"
+                android:src="@mipmap/ic_left_gray" />
+
+            <!-- 标题栏 -->
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:ellipsize="end"
+                android:lines="1"
+                android:maxEms="10"
+                android:textColor="#121212"
+                android:textSize="17sp" />
+
+            <!-- 右边按钮 -->
+            <ImageView
+                android:id="@+id/toolbar_right_iv"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:padding="8dp"
+                android:src="@drawable/ic_product_shoppingcar"
+                android:visibility="gone" />
+
+            <!-- 显示数量-->
+            <TextView
+                android:id="@+id/toolbar_right_number_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="13dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/ic_product_shopcar_pointer"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <!-- 右边按钮文本 -->
+            <TextView
+                android:id="@+id/toolbar_right_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:padding="8dp"
+                android:textColor="@color/text_green"
+                android:textSize="13sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <!-- 标题栏下面的分割线 -->
+        <View
+            android:id="@+id/toolbar_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/toolbar_rv"
+            android:background="@color/gray" />
+    </RelativeLayout>
+
+
+    <!-- 网络加载失败页面 -->
+    <com.xi6666.carWash.base.view.CxxErrorView
+        android:id="@+id/toolbar_error_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:visibility="gone" />
+
+
+
+
+</RelativeLayout>

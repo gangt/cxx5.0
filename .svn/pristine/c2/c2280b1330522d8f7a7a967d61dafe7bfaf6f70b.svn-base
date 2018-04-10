@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 头部图片 -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@mipmap/bg_reddem_code_head" />
+
+    <!-- 兑换圈圈内 -->
+    <android.support.v7.widget.CardView
+        android:id="@+id/redeem_code_card"
+        android:layout_width="322dp"
+        android:layout_height="183dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="108dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="8dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/redeem_code_et"
+                android:layout_width="192dp"
+                android:layout_height="46dp"
+                android:background="@drawable/border_radius_green"
+                android:hint="请输入兑换码"
+                android:maxLength="8"
+                android:padding="10dp"
+                android:textColorHint="@color/light_gray_text"
+                android:textSize="14sp" />
+
+
+            <TextView
+                android:id="@+id/redeem_code_error_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="请输入正确的兑换码"
+                android:visibility="gone"
+                android:textColor="@color/red_text"
+                android:textSize="12sp" />
+
+
+            <Button
+                android:id="@+id/reddem_code_btn"
+                android:layout_width="192dp"
+                android:layout_height="41dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/bg_radius_green"
+                android:text="兑换"
+                android:textColor="@color/whiteTextColor" />
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+
+    <!-- 兑换规则-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/redeem_code_card"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical">
+
+        <!-- 标题 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="fill_parent"
+                android:background="@color/text_green" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="兑换规则:"
+                android:textColor="@color/text_black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="14dp"
+            android:text="Q：什么是违章卡兑换码？
+     违章卡兑换码是车小喜出品的违章处理卡的兑换资格，用户拥
+有兑换码后，即可通过兑换获得违章卡一张。
+
+Q：怎么获得兑换码？
+     违章卡兑换码可通过好友赠送，或者参加车小喜活动获得。
+
+Q：兑换码可重复使用吗？
+     不能，一个兑换码只能兑换一张违章卡，不能重复兑换。"
+            android:textSize="12sp" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

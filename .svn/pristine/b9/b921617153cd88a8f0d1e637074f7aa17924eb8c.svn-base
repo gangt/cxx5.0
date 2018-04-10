@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <com.xi6666.store.custom.MonitorScrollView
+        android:id="@+id/store_details_scroll_msv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 头部  -->
+            <com.xi6666.store.custom.StoreDetailsHeadView
+                android:id="@+id/store_details_head"
+                android:layout_width="match_parent"
+                android:focusable="false"
+                android:layout_height="wrap_content" />
+
+
+            <!-- 本店服务项目 -->
+            <com.xi6666.store.custom.StoreDetailsServiceView
+                android:id="@+id/store_details_service"
+                android:layout_width="match_parent"
+                android:layout_height="162dp"
+                android:layout_marginTop="11dp"
+                android:background="@color/white" />
+
+
+            <!-- 本店技师团队 -->
+            <LinearLayout
+                android:id="@+id/store_details_technician_ll"
+                android:layout_width="match_parent"
+                android:layout_height="184dp"
+                android:layout_marginTop="11dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="29dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="3dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="14dp"
+                        android:background="@color/text_green" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="本店技师团队"
+                        android:textColor="@color/text_black" />
+                </LinearLayout>
+
+
+
+                <!-- 技师团队 -->
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/store_details_technician_team"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:focusable="false"
+                    android:paddingTop="22dp"
+                    android:background="@color/white" />
+            </LinearLayout>
+
+
+            <!-- 车主评价 -->
+            <com.xi6666.store.custom.StoreDetailsEvaluateView
+                android:id="@+id/store_details_evaluate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp" />
+        </LinearLayout>
+    </com.xi6666.store.custom.MonitorScrollView>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray" />
+
+    <!--  点评和联系门店  -->
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:orientation="horizontal">
+
+
+        <!-- 点评 -->
+        <LinearLayout
+            android:id="@+id/store_details_comment_ll"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/ic_comment_gray"
+                android:gravity="center"
+                android:text="点评 " />
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#cccccc" />
+
+
+        <!-- 联系门店 -->
+        <LinearLayout
+            android:id="@+id/store_details_cell_ll"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/ic_cell_gray"
+                android:gravity="center"
+                android:text="联系门店 " />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

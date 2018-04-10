@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <!--    历史搜索记录  -->
+    <LinearLayout
+        android:id="@+id/new_carwash_history_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/activity_carwash_search" />
+
+    </LinearLayout>
+
+
+    <!-- 搜索结果 -->
+    <LinearLayout
+        android:id="@+id/new_carwash_soso_result_ll"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="match_parent">
+        <include layout="@layout/activity_carwash_search_result" />
+    </LinearLayout>
+
+</LinearLayout>

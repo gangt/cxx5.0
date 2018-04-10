@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.xi6666.view.superrecyclerview.XRecyclerView
+            android:id="@+id/my_car_xrv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/my_car_not_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:layout_marginTop="50dp"
+            android:gravity="center_horizontal"
+            android:text="暂未添加爱车"
+            android:textSize="13sp"
+            android:visibility="gone" />
+
+        <com.xi6666.carWash.base.view.CxxErrorView
+            android:id="@+id/my_car_error_view"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="match_parent" />
+
+    </FrameLayout>
+
+
+    <View
+        android:id="@+id/add_car_title_v"
+        style="@style/horizontal_view" />
+
+    <Button
+        android:id="@+id/my_car_add_car_btn"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:background="@color/text_green"
+        android:text="添加爱车"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+
+</LinearLayout>

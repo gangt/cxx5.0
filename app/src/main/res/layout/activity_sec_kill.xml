@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/activity_sec_kill"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-aotu"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.xi6666.seckill.view.SecKillAct">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.xi6666.view.DragScrollDetailsLayout
+            android:id="@+id/dsdl_seckkill"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="46dp"
+            android:orientation="vertical"
+            app:percent="0">
+
+            <com.xi6666.view.AlphaScrollView
+                android:id="@+id/asl_seckkill"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true"
+                android:scrollbars="none"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="360dp">
+
+                        <android.support.v4.view.ViewPager
+                            android:id="@+id/vp_seckkill"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"/>
+
+                        <TextView
+                            android:id="@+id/txt_seckkill_pointer"
+                            android:layout_width="53dp"
+                            android:layout_height="24dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginRight="15dp"
+                            android:background="@drawable/product_banner_point"
+                            android:gravity="center"
+                            android:text="0张"
+                            android:textColor="@android:color/white"
+                            android:textSize="12sp"/>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="72dp"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="6.5"
+                            android:background="#f6b51a">
+
+                            <TextView
+                                android:id="@+id/txt_seckkill_xiaoxiprice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="17dp"
+                                android:text="小喜价: "
+                                android:textColor="@android:color/white"
+                                android:textSize="15sp"/>
+
+                            <TextView
+                                android:id="@+id/txt_seckkill_netprice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginLeft="15dp"
+                                android:text="网购价:"
+                                android:textColor="@android:color/white"
+                                android:textSize="13sp"/>
+
+                            <TextView
+                                android:id="@+id/txt_seckkill_yuanprice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginRight="10dp"
+                                android:text="原价"
+                                android:textColor="@android:color/white"
+                                android:textSize="13sp"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3.5"
+                            android:background="#f1f1f1">
+
+                            <TextView
+                                android:id="@+id/txt_seckkill_state"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="13dp"
+                                android:text="距离开始"
+                                android:textColor="@android:color/black"
+                                android:textSize="13sp"/>
+
+                            <com.xi6666.view.TimerText
+                                android:id="@+id/tt_seckkill_timer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="15dp"
+                                />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="57dp">
+
+                        <TextView
+                            android:id="@+id/txt_seckkill_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="10dp"
+                            android:maxLines="2"
+                            android:text="名称"
+                            android:textColor="@color/txtMineOrderTitle"
+                            android:textSize="14sp"/>
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/divColor"/>
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="28dp"
+                            android:drawableLeft="@drawable/gary_pointer"
+                            android:drawablePadding="4dp"
+                            android:text="品牌直供"
+                            android:textColor="@color/txtSettingVersion"
+                            android:textSize="13sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:drawableLeft="@drawable/gary_pointer"
+                            android:drawablePadding="4dp"
+                            android:text="门店保障"
+                            android:textColor="@color/txtSettingVersion"
+                            android:textSize="13sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="25dp"
+                            android:drawableLeft="@drawable/gary_pointer"
+                            android:drawablePadding="4dp"
+                            android:text="原厂价格"
+                            android:textColor="@color/txtSettingVersion"
+                            android:textSize="13sp"/>
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/v_seckkill_div"
+                        android:layout_width="wrap_content"
+                        android:layout_height="11dp"
+                        android:background="@color/divColor"/>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_seckkill_colorandsize"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <TextView
+                            android:id="@+id/txt_seckkill_color"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="11dp"
+                            android:layout_marginTop="12dp"
+                            android:text="颜色"
+                            android:textColor="@color/txtMineOrderDefault"
+                            android:textSize="15sp"
+                            android:visibility="gone"/>
+
+
+                        <com.xi6666.view.MesureGrideView
+                            android:id="@+id/rg_product_color"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/txt_seckkill_color"
+                            android:layout_marginTop="12dp"
+                            android:clickable="true"
+                            android:numColumns="3"
+                            >
+                        </com.xi6666.view.MesureGrideView>
+
+                        <TextView
+                            android:id="@+id/txt_product_size"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/rg_product_color"
+                            android:layout_marginLeft="11dp"
+                            android:text="尺寸"
+                            android:textColor="@color/txtMineOrderDefault"
+                            android:textSize="15sp"
+                            android:visibility="gone"/>
+
+                        <android.support.v7.widget.RecyclerView
+
+                            android:id="@+id/rg_seckkill_size"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:layout_below="@id/txt_product_size"
+                            android:layout_marginTop="12dp"
+                            >
+                        </android.support.v7.widget.RecyclerView>
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="11dp"
+                        android:background="@color/divColor"/>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_seckkill_store"
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:text="可咨询、服务门店"
+                            android:textColor="@color/txtMineOrderTitle"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="11dp"
+                            android:src="@drawable/address_act_arrow"/>
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/v_seckkill_store_div"
+                        android:layout_width="match_parent"
+                        android:layout_height="11dp"
+                        android:background="@color/divColor"
+                        android:visibility="gone"/>
+                </LinearLayout>
+            </com.xi6666.view.AlphaScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/tb_seckkill"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    app:tabIndicatorColor="@color/themeColor"
+                    app:tabSelectedTextColor="@color/loginBtnColor"
+                    app:tabTextAppearance="@style/TabLayoutTextAppearance"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divColor"/>
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/vp_seckkill_detial"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+        </com.xi6666.view.DragScrollDetailsLayout>
+
+        <Button
+            android:id="@+id/btn_seckill_sure"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/themeColor"
+            android:text="立即报名"
+            android:textColor="@android:color/white"
+            android:textSize="17sp"
+            />
+
+        <ImageView
+            android:id="@+id/iv_seckkill_back_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="80dp"
+            android:layout_marginRight="20dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_back_top"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/iv_seckkill_goods_anim"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:scaleType="fitXY"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_seckkill_error"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_seckkill_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/ic_error"/>
+
+        <TextView
+            android:id="@+id/tv_seckkill_again"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/iv_seckkill_error"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_happybeans_green"
+            android:gravity="center"
+            android:text="点击重试"
+            android:textColor="@color/themeColor"
+            android:textSize="13sp"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_seckkill_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@drawable/bg_product_title">
+
+        <ImageView
+            android:id="@+id/iv_seckkill_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/ic_product_back">
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/iv_seckkill_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/ic_seckill_call_phone">
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/iv_seckkill_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_toLeftOf="@id/iv_seckkill_more"
+            android:src="@drawable/ic_product_share">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/txt_seckkill_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:text="商品详情"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:visibility="gone"/>
+    </RelativeLayout>
+</RelativeLayout>

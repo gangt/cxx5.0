@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/activity_setting"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/divColor"
+    android:orientation="vertical"
+    tools:context="com.xi6666.setting.view.SettingAct">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="186dp"
+        android:background="@color/divColor">
+
+        <ImageView
+            android:id="@+id/iv_setting_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/ic_setting_logo"/>
+
+        <ImageView
+            android:id="@+id/iv_setting_about"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_setting_logo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="7dp"
+            android:src="@drawable/ic_setting_about"/>
+        <TextView
+            android:id="@+id/txt_setting_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_setting_about"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp"
+            android:text="车小喜"
+            android:textColor="@color/txtSettingVersion"
+            android:textSize="13dp"/>
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/iv_setting_rlv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"/>
+
+    <TextView
+        android:id="@+id/txt_setting_signout"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:layout_marginTop="11dp"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:text="退出当前账户"
+        android:textColor="@color/txxtSettingSingout"
+        android:textSize="15sp"/>
+</LinearLayout>

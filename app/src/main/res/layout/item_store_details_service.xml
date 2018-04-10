@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+
+    <LinearLayout
+        android:id="@+id/store_details_service_one"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/store_details_service_one_iv"
+            android:layout_width="47dp"
+            android:layout_height="47dp" />
+
+        <TextView
+            android:id="@+id/store_details_service_one_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="特惠洗车" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/store_details_service_two"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/store_details_service_two_iv"
+            android:layout_width="47dp"
+            android:layout_height="47dp"  />
+
+        <TextView
+            android:id="@+id/store_details_service_two_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="特惠洗车" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/store_details_service_three"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/store_details_service_three_iv"
+            android:layout_width="47dp"
+            android:layout_height="47dp" />
+
+        <TextView
+            android:id="@+id/store_details_service_three_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="特惠洗车" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/store_details_service_four"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/store_details_service_four_iv"
+            android:layout_width="47dp"
+            android:layout_height="47dp" />
+
+        <TextView
+            android:id="@+id/store_details_service_four_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="特惠洗车" />
+    </LinearLayout>
+
+
+</LinearLayout>

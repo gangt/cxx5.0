@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 兑换码-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f2f5f2"
+        android:gravity="center_horizontal">
+
+
+        <!--违章卡-->
+        <RelativeLayout
+            android:id="@+id/illegal_reddem_code_card_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="@mipmap/bg_illegal_card">
+
+            <TextView
+                android:id="@+id/illegal_reddem_code_card_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:text="违章卡"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <!-- 卡号 -->
+            <TextView
+                android:id="@+id/illegal_reddem_code_number_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="12dp"
+                android:text="卡号:xxxxxxx"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+
+
+            <!-- 类型 -->
+            <TextView
+                android:id="@+id/illegal_reddem_code_type_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/illegal_reddem_code_card_tv"
+                android:layout_below="@+id/illegal_reddem_code_card_tv"
+                android:layout_marginTop="15dp"
+                android:text="类        型 :  xxxxxxxx"
+                android:textColor="@color/white" />
+
+
+            <TextView
+                android:id="@+id/illegal_reddem_code_date_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/illegal_reddem_code_card_tv"
+                android:layout_below="@+id/illegal_reddem_code_type_tv"
+                android:layout_marginTop="7dp"
+                android:text="购买日期 :  "
+                android:textColor="@color/white" />
+
+
+        </RelativeLayout>
+
+
+        <!-- 兑换码框框 -->
+        <TextView
+            android:id="@+id/illegal_reddem_code_tv"
+            android:layout_width="192dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/illegal_reddem_code_card_rl"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="48dp"
+            android:background="@drawable/border_radius_green_bg_white"
+            android:gravity="center"
+            android:text=""
+            android:textColorHint="@color/homeAddressTxtColor"
+            android:textSize="29sp" />
+
+
+        <Button
+            android:id="@+id/illegal_reddem_code_btn"
+            android:layout_width="192dp"
+            android:layout_height="41dp"
+            android:layout_alignLeft="@+id/illegal_reddem_code_tv"
+            android:layout_below="@+id/illegal_reddem_code_tv"
+            android:layout_marginBottom="44dp"
+            android:layout_marginTop="43dp"
+            android:background="@drawable/bg_radius_green"
+            android:text="生成兑换码"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+    </RelativeLayout>
+
+
+    <!-- 兑换规则-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/redeem_code_card"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical">
+
+        <!-- 标题 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="fill_parent"
+                android:background="@color/text_green" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="赠送规则:"
+                android:textColor="@color/text_black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="14dp"
+            android:text="1、未经启用的违章处理卡可进行赠送。
+\n2、确认赠送后，生成兑换码，将兑换码发给好友。
+\n3、好友在“我的”-“卡券包”-“违章卡”中输入兑换码，即可获得所
+     赠送的违章卡。
+\n4、生成兑换码后，不可撤回。"
+            android:textSize="12sp" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

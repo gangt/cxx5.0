@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/gray"
+    android:orientation="vertical">
+    
+
+    <!--  品牌分类 -->
+    <FrameLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="44dp">
+
+        <!--    品牌     -->
+        <android.support.design.widget.TabLayout
+            android:id="@+id/all_classification_tab"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            app:tabIndicatorColor="@color/text_green"
+            app:tabSelectedTextColor="@color/text_green"
+            app:tabTextColor="@color/text_gray" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_gravity="center"
+            android:background="@color/gray"
+            android:layout_height="match_parent" />
+
+    </FrameLayout>
+
+    <!-- 分割线 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"/>
+
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/all_classification_vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layout_marginLeft="27dp"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/store_technician_team_head_iv"
+        android:layout_width="75dp"
+        android:layout_marginBottom="18dp"
+        android:layout_height="75dp" />
+
+
+    <TextView
+        android:id="@+id/store_technician_team_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxEms="5"
+        android:ellipsize="end"
+        android:lines="1"
+        android:text="王振东王振东王振东"/>
+
+</LinearLayout>

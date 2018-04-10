@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#edf3e9">
+
+        <!--banner图-->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@mipmap/bg_new_carwashbanner" />
+
+        <ImageView
+            android:id="@+id/new_carwash_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="190dp"
+            android:src="@mipmap/bg_new_carwashcard" />
+
+
+        <ImageView
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/new_carwash_iclude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/bg_service_commitment"/>
+        <include
+            android:id="@+id/new_carwash_iclude"
+            android:layout_alignParentBottom="true"
+            layout="@layout/include_gaosling_server"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"/>
+    </RelativeLayout>
+
+</LinearLayout>

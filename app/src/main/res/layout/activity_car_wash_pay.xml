@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <!-- 布局 -->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/car_wash_pay_btn"
+            android:background="@color/divColor">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/divColor"
+                android:orientation="vertical">
+                <!-- 顶端支付-->
+                <RelativeLayout
+                    android:id="@+id/rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/bg_carwash_surepay"
+                    >
+
+                    <!-- 标题名字 -->
+                    <TextView
+                        android:id="@+id/car_wash_pay_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"
+                        android:text="洗车卡"
+                        android:textColor="@color/homeAddressTxtColor"
+                        android:textSize="17sp"/>
+
+                    <!-- 金钱 -->
+                    <TextView
+                        android:id="@+id/car_wash_pay_moeny"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginTop="55dp"
+                        android:text="¥"
+                        android:textColor="@color/text_orange"
+                        android:textSize="20sp"/>
+                    <!-- 详情信息-->
+                    <TextView
+                        android:id="@+id/car_wash_pay_message"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="60dp"
+                        android:text="充值金额"
+                        android:textSize="13sp"/>
+
+                    <!--  洗车卷总额 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/car_wash_pay_message"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="15dp"
+                        android:text="洗车卡金额"
+                        android:textSize="13sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/car_wash_pay_total_moeny"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/car_wash_pay_message"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginTop="15dp"
+                        android:text="￥"
+                        android:textColor="@color/text_orange"
+                        android:textSize="13sp"/>
+
+                    <!-- 优惠金额 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/car_wash_pay_discount_moeny"
+                        android:layout_marginTop="15dp"
+                        android:text="优惠金额"
+                        android:textSize="15sp"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/car_wash_pay_discount_moeny"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/car_wash_pay_total_moeny"
+                        android:layout_marginRight="29dp"
+                        android:layout_marginTop="15dp"
+                        android:text="￥300.00"
+                        android:textSize="15sp"
+                        android:visibility="gone"/>
+
+                    <!-- 到账时间 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/car_wash_pay_arrival_time"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="15dp"
+                        android:text="购物代金券"
+                        android:textSize="13sp"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/car_wash_pay_arrival_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/car_wash_pay_discount_moeny"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginTop="15dp"
+                        android:text="¥"
+                        android:textColor="@color/text_orange"
+                        android:textSize="13sp"/>
+                </RelativeLayout>
+
+                <!-- 选择支付方式 -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rv"
+                    android:layout_marginTop="26dp"
+                    android:background="@color/whiteTextColor"
+                    android:orientation="vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
+
+                    <TextView
+                        android:id="@+id/tv_01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"
+                        android:gravity="center"
+
+                        android:text="选择支付方式"
+                        android:textColor="@color/txtMineOrderDefault"
+                        android:textSize="15sp"/>
+
+                    <!-- 分割线 -->
+                    <View
+                        style="@style/horizontal_view"
+                        android:layout_below="@+id/tv_01"/>
+                    <!-- 支付宝支付 -->
+                    <RelativeLayout
+                        android:id="@+id/pay_wechat_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="59dp"
+                        android:layout_below="@+id/tv_01"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/pay_wechat_iv"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="4dp"
+                            android:src="@mipmap/ic_wechat_pay"/>
+
+                        <TextView
+                            android:id="@+id/pay_wechat_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="85dp"
+                            android:text="微信支付"
+                            android:textColor="@color/text_black"
+                            android:textSize="16sp"/>
+
+                        <CheckBox
+                            android:id="@+id/pay_wechat_rb"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+
+                            android:background="@drawable/ic_car_wars"
+                            android:button="@null"
+                            android:checked="true"
+                            android:clickable="false"/>
+
+                    </RelativeLayout>
+
+                    <!-- 分割线 -->
+                    <View
+                        style="@style/horizontal_view"
+                        android:layout_below="@+id/pay_wechat_ll"/>
+                    <!-- 支付宝支付 -->
+                    <RelativeLayout
+                        android:id="@+id/pay_ali_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="59dp"
+                        android:layout_below="@+id/pay_wechat_ll"
+
+                        android:orientation="horizontal"
+                        android:text="支付宝">
+
+                        <ImageView
+                            android:id="@+id/pay_ali_iv"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="4dp"
+                            android:src="@mipmap/ic_ali_pay"/>
+
+                        <TextView
+                            android:id="@+id/pay_ali_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="85dp"
+                            android:text="支付宝"
+                            android:textColor="@color/text_black"
+                            android:textSize="16sp"/>
+
+                        <CheckBox
+                            android:id="@+id/pay_ali_rb"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+
+                            android:background="@drawable/ic_car_wars"
+                            android:button="@null"
+                            android:clickable="false"/>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/pay_ali_ll"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="10dp"
+                    android:text="*充值及赠送金额将在10分钟以内到账"
+                    android:textColor="@color/text_gray"
+                    android:textSize="11sp"/>
+            </LinearLayout>
+        </ScrollView>
+
+
+        <View
+            style="@style/horizontal_view"
+            android:layout_above="@+id/car_wash_pay_btn"/>
+
+        <Button
+            android:id="@+id/car_wash_pay_btn"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/text_green"
+            android:textColor="@color/whiteTextColor"
+            android:textSize="17sp"/>
+    </RelativeLayout>
+</LinearLayout>

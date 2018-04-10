@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:paddingBottom="15dp"
+              android:background="@color/whiteTextColor"
+              android:paddingLeft="17dp"
+              android:layout_height="125dp">
+
+    <ImageView
+        android:id="@+id/iv_order_affirm_goods_img"
+        android:layout_marginTop="14dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/no_data_empty"/>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="110dp"
+        android:layout_marginLeft="15dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_order_affirm_goods_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="33dp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:text="爱打架了大家拉到就垃圾大连交大路啊大大啊大大"
+            android:textSize="15sp"
+            android:textColor="#121212"/>
+
+        <TextView
+            android:id="@+id/tv_order_affirm_new_person"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text=""
+            android:textColor="#f53825"
+            android:textSize="14sp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_order_affirm_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#929292"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/tv_order_affirm_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text=""
+                android:textColor="#929292"
+                android:textSize="14sp"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp">
+            <TextView
+                android:id="@+id/tv_order_affirm_goods_xi_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#f53825"
+                android:textSize="18sp"
+                android:text="¥299.00"/>
+
+            <TextView
+                android:id="@+id/tv_order_affirm_goods_menshi_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#929292"
+                android:layout_toRightOf="@id/tv_order_affirm_goods_xi_price"
+                android:textSize="16sp"
+                android:layout_marginLeft="8dp"
+                android:layout_centerVertical="true"
+                android:text="¥399.00"/>
+
+            <TextView
+                android:id="@+id/tv_order_affirm_goods_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:textColor="#121212"
+                android:textSize="14sp"
+                android:text="x1"/>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

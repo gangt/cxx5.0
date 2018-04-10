@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_use_coupon"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#dce0df"
+    tools:context="com.xi6666.order.activity.UseCouponActivity">
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/layout_error_retry"/>
+
+    <com.xi6666.view.superrecyclerview.XRecyclerView
+        android:id="@+id/coupon_XRecyclerView"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </com.xi6666.view.superrecyclerview.XRecyclerView>
+
+</LinearLayout>

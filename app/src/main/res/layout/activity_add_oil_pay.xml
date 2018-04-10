@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/divColor">
+
+        <Button
+            android:id="@+id/surepay_btn_pay"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/themeColor"
+            android:text="确认支付"
+            android:textColor="@color/whiteTextColor"
+            android:textSize="20sp"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="65dp"
+            android:background="@color/divColor">
+
+            <CheckBox
+                android:id="@+id/surepay_cb_checked"
+                style="@style/userAgreementCb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="15dp"
+                />
+
+
+            <TextView
+                android:id="@+id/surepay_iv_read"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/surepay_cb_checked"
+                android:text="已阅读并同意协议"
+                />
+
+            <TextView
+                android:id="@+id/surepay_tv_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/surepay_iv_read"
+                android:text="《用户协议》"
+                android:textColor="@color/themeColor"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/surepay_tv_user"
+
+                android:text=""
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_pay_detial"
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/addoil_surepay_bg">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:text="充值详情"
+                android:textColor="@color/addOilTitle"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/txt_every_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="60dp"
+                android:text="每月加油"
+                android:textColor="@color/addOilTitle"
+                android:textSize="15dp"/>
+
+
+            <TextView
+                android:id="@+id/txt_discount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_every_month"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="12dp"
+                android:text="折扣选择"
+                android:textColor="@color/addOilTitle"
+                android:textSize="15dp"/>
+
+            <View
+                android:id="@+id/v_div"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@id/txt_discount"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/div_line"
+                android:layerType="software"/>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_discount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/v_div"
+                android:layout_marginTop="12dp">
+
+                <TextView
+                    android:id="@+id/txt_discount_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text="优  惠  券"
+                    android:textColor="@color/addOilTitle"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/txt_discount_save_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:drawablePadding="5dp"
+                    android:drawableRight="@drawable/ic_mine_order_arrow"
+                    android:text="元"
+                    android:textColor="@color/addOilTitle"
+                    android:textSize="15sp"/>
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/txt_save_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_discount"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="12dp"
+                android:text="节      省"
+                android:textColor="@color/addOilTitle"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:id="@+id/txt_should_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_save_money"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="12dp"
+                android:text="应 付 "
+                android:textColor="@color/addOilSave"
+                android:textSize="15dp"/>
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txt_pay_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_pay_detial"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="27dp"
+            android:text="选择支付方式"
+            android:textColor="@color/addOillight"
+            android:textSize="15dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="124dp"
+            android:layout_below="@id/txt_pay_type"
+            android:layout_marginTop="5dp"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/surepay_pr_wechatpay"
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                >
+
+                <ImageView
+                    android:id="@+id/surepay_iv_wechatpay"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:src="@mipmap/ic_wechat_pay"
+                    />
+
+                <TextView
+                    android:id="@+id/surepay_tv_wechatpay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/surepay_iv_wechatpay"
+                    android:text="微信支付"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/surepay_tv_wechatpay"
+                    android:layout_toRightOf="@id/surepay_iv_wechatpay"
+                    android:text="推荐安装微信5.0以上版本的用户使用"
+                    android:textSize="10sp"
+                    android:visibility="gone"
+                    />
+
+                <RadioButton
+                    android:id="@+id/surepay_rb_wechatpay"
+                    style="@style/CustomCheckboxTheme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divColor"
+                ></View>
+
+            <RelativeLayout
+                android:id="@+id/surepay_pr_alipay"
+                android:layout_width="match_parent"
+                android:layout_height="62dp">
+
+                <ImageView
+                    android:id="@+id/surepay_iv_alipay"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/alipay_big"
+                    />
+
+                <TextView
+                    android:id="@+id/surepay_tv_alipay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/surepay_iv_alipay"
+                    android:text="支付宝"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/surepay_tv_alipay"
+                    android:layout_toRightOf="@id/surepay_iv_alipay"
+                    android:text="推荐有支付宝账号的用户使用"
+                    android:textSize="10sp"
+                    android:visibility="gone"
+                    />
+
+                <RadioButton
+                    android:id="@+id/surepay_rb_alipay"
+                    style="@style/CustomCheckboxTheme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </RelativeLayout>
+</LinearLayout>

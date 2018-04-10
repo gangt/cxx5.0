@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#44000000"
+    android:orientation="vertical">
+
+
+    <!-- 这里是汽车型号选择 -->
+    <LinearLayout
+        android:layout_width="265dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:orientation="vertical"
+        android:paddingTop="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:background="@color/whiteTextColor"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp">
+
+            <com.xi6666.car.view.custom.BorderTextView
+                android:id="@+id/car_type_id"
+                android:layout_width="wrap_content"
+                android:text="小车"
+                android:layout_height="wrap_content"
+                android:gravity="center" />
+        </LinearLayout>
+        <!-- 汽车品牌 -->
+        <ListView
+            android:id="@+id/car_type_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="2dp"
+            android:background="@color/whiteTextColor" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

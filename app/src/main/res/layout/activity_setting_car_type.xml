@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!-- 选择车牌 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- 字母搜索栏 -->
+        <com.xi6666.car.view.custom.LetterView
+            android:id="@+id/setting_car_type_char_lv"
+            android:layout_width="25dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@color/white" />
+
+
+        <!-- 车牌 -->
+        <ExpandableListView
+            android:id="@+id/setting_car_type_elv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
+            android:layout_toLeftOf="@+id/setting_car_type_char_lv"
+            android:background="@color/white" />
+
+
+        <!-- 放大镜 -->
+        <TextView
+            android:id="@+id/setting_car_type_fdj_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/setting_car_type_char_lv"
+            android:background="@mipmap/ic_white_dialog"
+            android:gravity="left|center"
+            android:paddingBottom="6dp"
+            android:paddingLeft="18dp"
+            android:paddingRight="6dp"
+            android:text="A"
+            android:textColor="@color/text_black"
+            android:textSize="30sp"
+            android:visibility="gone" />
+
+        <com.xi6666.carWash.base.view.CxxErrorView
+            android:id="@+id/setting_car_brand_error_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+
+    <!-- 选择车的型号 -->
+    <RelativeLayout
+        android:id="@+id/setting_car_brand_type_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#44000000"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/setting_car_brand_type_ll"
+            android:layout_width="265dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <com.xi6666.car.view.custom.BorderTextView
+                android:id="@+id/setting_car_brand_type_btv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:gravity="center"
+                android:text="" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/gray" />
+
+            <!-- 汽车品牌 -->
+            <ListView
+                android:id="@+id/setting_car_brand_type_lv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2dp"
+                android:background="@color/whiteTextColor" />
+        </LinearLayout>
+
+        <com.xi6666.carWash.base.view.CxxErrorView
+            android:id="@+id/setting_car_brand_type_error_view"
+            android:layout_width="265dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@color/white"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+
+    <!-- 选择年限 和 发动机排量 -->
+    <LinearLayout
+        android:id="@+id/setting_car_type_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#dce0df"
+        android:visibility="gone">
+
+        <!-- 上面的状态栏 -->
+        <LinearLayout
+            android:id="@+id/setting_car_type_menu_ll"
+            android:layout_width="match_parent"
+            android:paddingTop="10dp"
+            android:paddingLeft="10dp"
+            android:orientation="horizontal"
+            android:layout_height="48dp" />
+
+        <!-- 列表 -->
+        <ListView
+            android:id="@+id/setting_car_type_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

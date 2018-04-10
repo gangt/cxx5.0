@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <ScrollView
+        android:id="@+id/scv_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_marginBottom="50dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <com.bigkoo.convenientbanner.ConvenientBanner
+                android:id="@+id/gaosline_bannar"
+                android:layout_width="match_parent"
+                android:layout_height="135dp"
+                app:canLoop="true"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divColor"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:background="@color/offlineColor"
+                android:paddingLeft="14dp"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_addoil_notice"/>
+
+                <com.xi6666.view.VerticalTextview
+                    android:id="@+id/txt_recharge_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30dp"
+                    android:text="ceshi "
+                    />
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divColor"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:layout_marginLeft="20dp"
+                android:drawableLeft="@drawable/ic_addoil_step_one"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="选择折扣"
+                android:textColor="@color/addOilTitle"
+                android:textSize="15dp"/>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divColor"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+
+            <com.xi6666.view.MesureGrideView
+                android:id="@+id/mgv_choice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="21dp"
+                android:layout_marginRight="7dp"
+                android:numColumns="3"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divColor"/>
+
+            <RelativeLayout
+                android:id="@+id/layout_open"
+                android:layout_width="match_parent"
+                android:layout_height="52dp">
+
+                <TextView
+                    android:id="@+id/txt_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="5dp"
+                    android:text="到账"
+                    android:textColor="@color/addOilTitle"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/txt_data_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_data"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="3dp"
+                    android:text="首月金额"
+                    android:textColor="@color/addOillight"
+                    android:textSize="13sp"/>
+
+                <ImageView
+                    android:id="@+id/iv_open_arraw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="14dp"
+                    android:layout_marginTop="14dp"
+                    android:src="@drawable/gaoslne_arraw"/>
+
+
+                <TextView
+                    android:id="@+id/txt_data_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_toLeftOf="@id/iv_open_arraw"
+                    android:text="期"
+                    android:textColor="@color/addOilTitle"
+                    android:textSize="15sp"/>
+            </RelativeLayout>
+
+            <com.xi6666.view.MesureListView
+                android:id="@+id/mlv_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="#00000000"
+                android:dividerHeight="0dip"
+                android:visibility="gone"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@color/divColor"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:layout_marginLeft="20dp"
+                android:drawableLeft="@drawable/ic_addoil_step_two"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="设置每月到账金额"
+                android:textColor="@color/addOilTitle"
+                android:textSize="15dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divColor"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="71dp">
+
+                <RelativeLayout
+                    android:layout_width="293dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/gaosling_how_money_bg">
+
+                    <ImageView
+                        android:id="@+id/iv_min_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+
+                        android:background="@drawable/gaosline_min_money"/>
+
+                    <TextView
+                        android:id="@+id/txt_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="1000"
+                        android:textColor="@color/addOilTitle"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/txt_money"
+                        android:text=" 元"
+                        android:textColor="@color/addOilTitle"
+                        android:textSize="15sp"/>
+
+
+                    <ImageView
+                        android:id="@+id/iv_add_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/gaosline_add_money"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="42dp">
+
+                <TextView
+                    android:id="@+id/txt_oldprice_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="14dp"
+                    android:text="原价"
+                    android:textColor="@color/addOillight"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:id="@+id/txt_oldprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/txt_oldprice_one"
+                    android:textColor="@color/addOillight"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:id="@+id/txt_oldprice_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/txt_oldprice"
+                    android:text="元"
+                    android:textColor="@color/addOillight"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:id="@+id/txt_newprice_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/txt_oldprice_two"
+                    android:text="折后价"
+                    android:textColor="@color/addOillight"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:id="@+id/txt_newprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/txt_newprice_one"
+                    android:textColor="@color/addOilTitle"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/txt_newprice"
+                    android:text="元"
+                    android:textColor="@color/addOillight"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:id="@+id/txt_savemoney_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="14dp"
+                    android:text="元"
+                    android:textColor="@color/addOillight"
+                    android:textSize="13sp"/>
+
+
+                <TextView
+                    android:id="@+id/txt_savemoney"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/txt_savemoney_two"
+                    android:textColor="@color/addOilSave"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:id="@+id/txt_savemoney_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/txt_savemoney"
+                    android:text="节省"
+                    android:textColor="@color/addOillight"
+                    android:textSize="13sp"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@color/divColor"
+                />
+
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:layout_marginLeft="20dp"
+                android:drawableLeft="@drawable/ic_addoil_step_thr"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="选择油卡"
+                android:textColor="@color/txtMineOrderTitle"
+                android:textSize="15dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divColor"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="42dp">
+
+                <RelativeLayout
+                    android:id="@+id/layout_myoilcard"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    >
+
+                    <TextView
+                        android:id="@+id/txt_card_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        android:text="中国石油"
+                        android:textColor="@color/addOilTitle"
+                        android:textSize="13sp"/>
+
+                    <ImageView
+                        android:id="@+id/iv_next"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/gaosiline_icon_next"/>
+
+                    <TextView
+                        android:id="@+id/txt_card_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@id/iv_next"
+                        android:text="卡号"
+                        android:textColor="@color/addOilTitle"
+                        android:textSize="13sp"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_addoilcard"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+                    <TextView
+                        android:id="@+id/txt_addoilcard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="添加油卡"
+                        android:textColor="@color/txtMineOrderTitle"
+                        android:textSize="15dp"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="13dp"
+                        android:layout_toLeftOf="@id/txt_addoilcard"
+                        android:src="@drawable/gaosline_add_money"/>
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@color/divColor"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:gravity="center"
+                android:text="加油流程"
+                android:textColor="@color/txtMineOrderTitle"
+                android:textSize="15dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divColor"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="131dp">
+
+                <ImageView
+                    android:id="@+id/iv_addoil_process"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="14dp"
+                    android:src="@drawable/ic_addoil_process"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_addoil_process"
+                    android:layout_marginLeft="121dp"
+                    android:layout_marginTop="7dp"
+                    android:text="第二步"
+                    android:textColor="@color/txtMineOrderDefault"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_addoil_process"
+                    android:layout_marginLeft="208dp"
+                    android:layout_marginTop="7dp"
+                    android:text="第三步"
+                    android:textColor="@color/txtMineOrderDefault"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_addoil_process"
+                    android:layout_marginLeft="297dp"
+                    android:layout_marginTop="7dp"
+                    android:text="第四步"
+                    android:textColor="@color/txtMineOrderDefault"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_addoil_process"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="7dp"
+                    android:text="第一步"
+                    android:textColor="@color/txtMineOrderDefault"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/txt_addoil_waht"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="11dp"
+                    android:layout_marginRight="14dp"
+                    android:text="什么是圈存?"
+                    android:textColor="@color/bgHappyBeans"
+                    android:textSize="12sp"/>
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@color/divColor"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:gravity="center"
+                android:text="服务承诺"
+                android:textColor="@color/txtMineOrderTitle"
+                android:textSize="15dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divColor"
+                />
+
+
+            <include
+                layout="@layout/include_addoil_server"
+                android:layout_width="match_parent"
+                android:layout_height="107dp"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@color/divColor"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="106dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/txt_recharge_people"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="21dp"
+                        android:gravity="center_horizontal"
+                        android:text="0人"
+                        android:textColor="@color/txtMineOrderTitle"
+                        android:textSize="26sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="20dp"
+                        android:text="用车小喜充值的用户已达"
+                        android:textColor="@color/txtSettingVersion"
+                        android:textSize="12sp"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/divColor"
+                    />
+
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/txt_addoil_savemoney"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="21dp"
+                        android:gravity="center_horizontal"
+                        android:text="0元"
+                        android:textColor="@color/txtMineOrderTitle"
+                        android:textSize="26sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="20dp"
+                        android:text="车小喜累计为用户节省油费"
+                        android:textColor="@color/txtSettingVersion"
+                        android:textSize="12sp"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <Button
+        android:id="@+id/btn_rechage"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/themeColor"
+        android:text="立即充值"
+        android:textColor="@android:color/white"
+        android:textSize="19sp"/>
+</RelativeLayout>

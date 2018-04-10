@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/resh_back">
+
+        <ImageView
+            android:id="@+id/wait_dialog_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/loading1"
+            ></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/wait_dialog_iv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="2dp"
+            android:text="   加载中..."
+            android:textColor="@color/whiteTextColor"
+            android:textSize="12sp"/>
+    </RelativeLayout>
+</RelativeLayout>

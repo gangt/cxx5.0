@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="106dp"
+            android:background="@color/whiteTextColor"
+            android:orientation="vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="33dp"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:text="加油卡类型" />
+
+
+
+            <!--中国石化 和 中国石油选择-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <!-- 中国石化-->
+                <RelativeLayout
+                    android:id="@+id/add_oil_card_sinopec_ll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+                    <!-- 中国石化  -->
+                    <ImageView
+                        android:id="@+id/add_oil_card_sinopec_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/bg_sinopec_sel" />
+
+                    <!-- 单选按钮 -->
+                    <RadioButton
+                        android:id="@+id/add_oil_card_sinopec_rb"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignRight="@+id/add_oil_card_sinopec_iv"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/ic_oil_card_select"
+                        android:button="@null"
+                        android:layout_marginRight="5dp"
+                        android:checked="true"
+                        android:clickable="false" />
+
+                </RelativeLayout>
+
+
+                <!-- 中国石油-->
+                <RelativeLayout
+                    android:id="@+id/add_oil_card_petro_ll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/add_oil_card_petro_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="13dp"
+                        android:src="@mipmap/bg_petro_sel" />
+
+
+                    <!-- 单选按钮 -->
+                    <RadioButton
+                        android:id="@+id/add_oil_card_petro_rb"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignRight="@+id/add_oil_card_petro_iv"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/ic_oil_card_select"
+                        android:button="@null"
+                        android:checked="false"
+                        android:layout_marginRight="5dp"
+                        android:clickable="false" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <!-- 需要填写的信息 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="131dp"
+            android:layout_marginTop="9dp"
+            android:background="@color/whiteTextColor"
+            android:orientation="vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <!-- 手机号填写 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:orientation="horizontal"
+                android:paddingLeft="7dp">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:maxLength="12"
+                    android:text="手机号"
+                    android:textColor="@color/text_black"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/add_oil_card_phone_et"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="3"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:inputType="phone"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <View style="@style/horizontal_view" />
+
+            <!-- 加油卡卡号 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:orientation="horizontal"
+                android:paddingLeft="7dp">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="加油卡卡号"
+                    android:textColor="@color/text_black"
+                    android:textSize="15sp" />
+
+                <com.xi6666.cardbag.view.custom.CardInputEditText
+                    android:id="@+id/add_oil_card_number_et"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="3"
+                    android:background="@null"
+                    android:hint="请输入你的加油卡号"
+                    android:inputType="number"
+                    android:maxLength="23"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <View style="@style/horizontal_view" />
+
+            <!-- 姓名 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:orientation="horizontal"
+                android:paddingLeft="7dp">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="姓名"
+                    android:textColor="@color/text_black"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/add_oil_card_name_et"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="3"
+                    android:background="@null"
+                    android:hint=""
+                    android:maxLength="10"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <View style="@style/horizontal_view" />
+
+        </LinearLayout>
+
+
+        <!-- 提示 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="19dp"
+            android:text="请你核对加油卡号,以免充值错误造成不必要的损失"
+            android:textColor="#757575"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <View style="@style/horizontal_view" />
+
+    <Button
+        android:id="@+id/add_oil_card_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_gravity="center"
+        android:background="@color/text_green"
+        android:text="确认添加"
+        android:textColor="@color/white"
+        android:textSize="17sp" />
+
+</LinearLayout>

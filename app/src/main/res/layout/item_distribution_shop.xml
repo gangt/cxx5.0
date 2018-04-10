@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="@color/whiteTextColor"
+    android:orientation="vertical">
+
+
+    <!-- 这是头像 -->
+    <ImageView
+        android:id="@+id/service_store_head_iv"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="11dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/white" />
+
+    <!-- 这是标题-->
+    <TextView
+        android:id="@+id/service_store_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:layout_toRightOf="@+id/service_store_head_iv"
+        android:ellipsize="end"
+        android:maxEms="9"
+        android:singleLine="true"
+        android:textColor="@color/text_black"
+        android:textSize="15sp" />
+
+
+    <!--这是地方-->
+    <TextView
+        android:id="@+id/service_store_details_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/service_store_title_tv"
+        android:layout_below="@+id/service_store_title_tv"
+        android:layout_marginRight="62dp"
+        android:layout_marginTop="20dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="  "
+        android:textColor="@color/text_gray"
+        android:textSize="12sp" />
+
+    <!--距离-->
+    <TextView
+        android:id="@+id/service_store_distance_tv"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="18dp"
+        android:ellipsize="end"
+        android:lines="1"
+        android:text=""
+        android:textColor="@color/text_gray"
+        android:textSize="12sp" />
+
+    <ImageView
+        android:id="@+id/service_store_cell_iv"
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:padding="10dp"
+        android:src="@mipmap/ic_cell_grren" />
+
+</RelativeLayout>

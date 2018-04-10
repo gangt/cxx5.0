@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--    全部品牌    -->
+    <RelativeLayout
+        android:id="@+id/service_classification_brand_rl"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawablePadding="10dp"
+            android:drawableRight="@mipmap/ic_jusp_gray"
+            android:text="全部品牌"
+            android:textColor="@color/text_black" />
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/service_classification_error_ll"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_error"/>
+
+        <Button
+            android:id="@+id/service_classification_error_btn"
+            android:layout_marginTop="20dp"
+            android:layout_width="100dp"
+            android:background="@drawable/bg_radius_gray"
+            android:layout_height="30dp"
+            android:text="重新加载"/>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/service_classification_brand_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+
+</LinearLayout>

@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- 状态  -->
+            <RelativeLayout
+                android:id="@+id/usage_details_status_rv"
+                android:layout_width="match_parent"
+                android:layout_height="82dp"
+                android:background="@mipmap/bg_to_audit">
+
+
+                <!-- 审核状态 -->
+                <TextView
+                    android:id="@+id/usage_details_status_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="21dp"
+                    android:layout_marginTop="15dp"
+                    android:text="待审核"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/usage_details_status_details_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/usage_details_status_tv"
+                    android:layout_below="@+id/usage_details_status_tv"
+                    android:layout_marginRight="94dp"
+                    android:layout_marginTop="7dp"
+                    android:text="客服会尽快与您联系，请保持电话畅通。如果疑问,请咨询客服电话:  444-9999-353"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+
+            <!-- 详情编号&& 使用日期-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/white">
+
+                <!-- 详情编号 -->
+                <TextView
+                    android:id="@+id/usage_details_number_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="11dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="21dp"
+                    android:text="805157387"
+                    android:textColor="@color/black_text"
+                    android:textSize="13sp" />
+
+
+                <!-- 使用日期 -->
+                <TextView
+                    android:id="@+id/usage_details_time_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@+id/usage_details_number_tv"
+                    android:layout_below="@+id/usage_details_number_tv"
+                    android:layout_marginBottom="22dp"
+                    android:layout_marginTop="19dp"
+                    android:text="2017-02-08"
+                    android:textColor="@color/black_text" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/usage_details_number_tv"
+                    android:layout_marginLeft="11dp"
+                    android:text="详情编号"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/usage_details_time_tv"
+                    android:layout_marginLeft="11dp"
+                    android:text="使用日期"
+                    android:textColor="@color/black" />
+
+            </RelativeLayout>
+
+
+            <!-- 违章信息 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/white">
+
+                <!-- 地址 -->
+                <TextView
+                    android:id="@+id/usage_details_illegal_address_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="16dp"
+                    android:text="河源光明路"
+                    android:textColor="@color/black_text"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+
+
+
+                <!-- 违章信息 -->
+                <TextView
+                    android:id="@+id/usage_details_illegal_details_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/usage_details_illegal_address_tv"
+                    android:layout_marginRight="15dp"
+                    android:layout_below="@+id/usage_details_illegal_address_tv"
+                    android:layout_marginTop="13dp"
+                    android:background="@color/bgHomeFunction"
+                    android:padding="8dp"
+                    android:text="安防服务奇偶覅挖掘佛挖掘佛为减肥无奇偶发文件服务费叫我叫我jow就我忘记我家我家我今晚叫我我我我叫我我家" />
+
+                <!-- 罚款 -->
+                <TextView
+                    android:id="@+id/usage_details_illegal_fine_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/usage_details_illegal_details_tv"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginTop="15dp"
+                    android:text="罚款  200元"
+                    android:textSize="12dp" />
+
+
+                <!-- 扣分 -->
+                <TextView
+                    android:id="@+id/usage_details_illegal_points_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/usage_details_illegal_details_tv"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@id/usage_details_illegal_fine_tv"
+                    android:text="扣分  1分"
+                    android:textSize="12dp" />
+
+                <!-- 时间 -->
+                <TextView
+                    android:id="@+id/usage_details_illegal_time_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/usage_details_illegal_fine_tv"
+                    android:layout_marginRight="15dp"
+                    android:text="2017-01-01 00:00"
+                    android:textColor="@color/txtPhoneNum"
+                    android:textSize="13sp" />
+
+
+            </RelativeLayout>
+
+
+            <!-- 违章卡信息-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/white">
+
+                <!-- 违章卡号  -->
+                <TextView
+                    android:id="@+id/usage_details_illegal_number_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="22dp"
+                    android:text="223566366"
+                    android:textColor="@color/black_text" />
+
+
+                <!-- 套餐-->
+                <TextView
+                    android:id="@+id/usage_details_illegal_package_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@id/usage_details_illegal_number_tv"
+                    android:layout_below="@+id/usage_details_illegal_number_tv"
+                    android:layout_marginTop="17dp"
+                    android:text="3个月套餐"
+                    android:textColor="@color/black_text" />
+
+                <!-- 次数 -->
+                <TextView
+                    android:id="@+id/usage_details_illegal_frequency_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@+id/usage_details_illegal_package_tv"
+                    android:layout_below="@+id/usage_details_illegal_package_tv"
+                    android:layout_marginBottom="44dp"
+                    android:layout_marginTop="16dp"
+                    android:text="1次"
+                    android:textColor="@color/black_text" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/usage_details_illegal_number_tv"
+                    android:layout_marginLeft="11dp"
+                    android:text="违章卡号"
+                    android:textColor="@color/black_text" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/usage_details_illegal_package_tv"
+                    android:layout_marginLeft="11dp"
+                    android:text="违章卡类型"
+                    android:textColor="@color/black_text" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/usage_details_illegal_frequency_tv"
+                    android:layout_marginLeft="11dp"
+                    android:text="本次处理违章次数"
+                    android:textColor="@color/black_text"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_alignTop="@+id/usage_details_illegal_frequency_tv"
+                    android:layout_marginLeft="11dp"
+                    android:layout_marginTop="24dp"
+                    android:text="(共罚款¥300， 扣3分)"
+                    android:textColor="@color/light_gray_text" />
+
+            </RelativeLayout>
+
+            <!-- 违章电话 -->
+            <TextView
+                android:id="@+id/usage_details_illegal_phone_tv"
+                android:gravity="center"
+                android:layout_marginTop="59dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="如果疑问，请咨询客服电话 400-9999-353"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+    
+    
+    
+    <Button
+        android:id="@+id/usage_details_cancel_application_btn"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:text="申请取消"
+        android:visibility="gone"
+        android:textColor="@color/white"
+        android:background="@color/text_green"/>
+
+
+
+
+</LinearLayout>

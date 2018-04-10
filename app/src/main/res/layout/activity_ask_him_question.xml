@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <!-- 上传图片  -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="上传图片(最多可上传5张)"
+        android:textColor="@color/text_black" />
+
+    <View
+        style="@style/horizontal_view"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp" />
+
+    <com.xi6666.store.custom.SelectImageView
+        android:id="@+id/ask_him_question_select_image_siv"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:paddingLeft="5dp" />
+
+
+    <!-- 分割线 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@color/divColor" />
+
+    <!-- 描述你的问题  -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="描述你的问题"
+        android:textColor="@color/text_black" />
+
+    <com.xi6666.view.custom.LimitEditTextView
+        android:id="@+id/ask_him_question_content_etv"
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:background="@color/gray"
+        android:paddingLeft="19dp"
+        android:paddingRight="19dp"
+        android:paddingTop="8dp"
+        app:hint="写下你的问题，技师有回复我们将会短信提醒;技师可能处于繁忙状态，如没有及时回复，请耐心等待。有疑问请致电400-9999-353"
+        app:maxLength="150" />
+
+</LinearLayout>

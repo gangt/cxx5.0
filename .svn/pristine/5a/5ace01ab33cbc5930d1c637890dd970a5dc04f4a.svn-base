@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.xi6666"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 友盟统计权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <!-- 阿里支付权限 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!-- 百度地图权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <!-- bugly权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+
+    <application
+        android:name=".app.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/NoActionbarTheme">
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="keyboard|screenSize|orientation|layoutDirection"
+            android:exported="true"
+            android:launchMode="singleTop">
+        </activity>
+        <activity android:name=".alipay.PayDemoActivity"/>
+        <!-- glide依赖网络设置 -->
+        <meta-data
+            android:name="com.xi6666.network.OkHttpGlideModule"
+            android:value="GlideModule"/>
+        <!-- Bugly配置APP ID -->
+        <meta-data
+            android:name="BUGLY_APPID"
+            android:value="c1b7cd6186"/>
+
+        <!-- Bugly配置APP渠道号 -->
+        <meta-data
+            android:name="BUGLY_APP_CHANNEL"
+            android:value="${UMENG_CHANNEL_VALUE}"/>
+        <!-- 配置Bugly调试模式（true或者false） -->
+        <meta-data
+            android:name="BUGLY_ENABLE_DEBUG"
+            android:value="true"/>
+        <!-- 友盟统计和多渠道 -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="570485bce0f55a3af300098e"/>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${UMENG_CHANNEL_VALUE}"/>
+        <!-- 百度地图 -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote">
+        </service>
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="stQHV5GFYbw9drwdAsAFrzof"/>
+        <!-- 微信支付回调界面 -->
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"/>
+        <!-- 微信分享回调 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity
+            android:name=".SecondAct"
+            android:windowSoftInputMode="stateVisible|adjustResize">
+
+
+        </activity>
+        <!-- 闪屏界面 -->
+        <activity
+            android:name=".splash.view.SplashAct"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <!-- 主界面 -->
+        <activity
+            android:name=".main.view.MainAct"
+            android:launchMode="singleTask">
+        </activity>
+        <!-- 引导界面 -->
+        <activity android:name=".guide.view.GuideAct">
+        </activity>
+        <!-- 个人资料界面 -->
+        <activity android:name=".userdata.view.UserDataAct">
+        </activity>
+        <!-- 我的消息界面 -->
+        <activity android:name=".message.view.MessageAct">
+        </activity>
+        <!-- 设置界面 -->
+        <activity android:name=".setting.view.SettingAct">
+        </activity>
+        <!-- 密码界面 -->
+        <activity android:name=".password.view.PassWordAct">
+        </activity>
+        <!-- 喜豆界面 -->
+        <activity android:name=".happybeans.view.HappyBeansAct">
+        </activity>
+        <!-- 加油界面 -->
+        <activity android:name=".addoil.view.AddoOilAct">
+        </activity>
+        <!-- 登录界面 -->
+        <activity android:name=".login.view.LoginAct">
+        </activity>
+        <!-- 省级单位 -->
+        <activity android:name=".cityaddress.view.AddressAct">
+        </activity>
+        <!-- 城市 -->
+        <activity android:name=".cityaddress.view.CityAddressAct">
+        </activity>
+        <!-- 卡券包 -->
+        <activity android:name=".cardbag.view.CardBagAct">
+        </activity>
+        <!-- 商品详情 -->
+        <activity android:name=".productdetails.view.ProductDetailsAct">
+        </activity>
+        <!-- 商城首页 -->
+        <activity android:name=".producthome.view.ProductHomeAct">
+        </activity>
+        <!-- 主界面 -->
+        <activity android:name=".evaluate.activity.StoreServiceItemActivity">
+        </activity>
+        <!-- 违章查询主界面 -->
+        <activity
+            android:name=".illegal.Activity.IllegalFindActivity"
+            android:theme="@style/AppBaseTheme">
+        </activity>
+        <!-- 违章查询查询结果页面 -->
+        <activity
+            android:name=".illegal.Activity.IllegalFindResultAct"
+            android:theme="@style/AppBaseTheme">
+        </activity>
+        <!-- 违章查询常见问题 -->
+        <activity
+            android:name=".illegal.Activity.ProblemAct"
+            android:theme="@style/AppBaseTheme">
+        </activity>
+        <!-- 申请退款 -->
+        <activity
+            android:name=".order.activity.ApplyDrawBackFormActivity"
+            android:theme="@style/AppBaseTheme">
+        </activity>
+        <!-- 订单支付页面 -->
+        <activity android:name=".order.activity.GoodsOrderDetailActivity">
+        </activity>
+        <activity android:name=".order.activity.RushCarAndServerOrderDetailActivity">
+        </activity>
+        <!-- 违章查询 -->
+        <activity android:name=".illegal.Activity.IllegalQueryListActivity">
+        </activity>
+        <activity android:name=".multi_image_selector.MultiImageSelectorActivity">
+        </activity>
+        <activity android:name=".order.activity.GoodsEvaluateActivity">
+        </activity>
+        <activity android:name=".order.activity.SelectEvaluateGoodsActivity">
+        </activity>
+        <activity android:name=".order.activity.DrawBackHandlingActivity">
+        </activity>
+        <activity android:name=".order.activity.MyOrderListActivity">
+        </activity>
+        <activity
+            android:name=".order.activity.RedPackageOpenActivity"
+            android:theme="@style/AppBaseTheme">
+        </activity>
+        <activity
+            android:name=".order.activity.PayFailedActivity"
+            android:launchMode="singleTask">
+        </activity>
+        <activity
+            android:name=".order.activity.GoodsOrderAffirmActivity"
+            android:theme="@style/AppBaseTheme">
+        </activity>
+        <activity
+            android:name=".order.activity.CashDeskActivity"
+            android:theme="@style/AppBaseTheme">
+        </activity>
+        <activity
+            android:name=".order.activity.MyShoppingCartActivity"
+            android:theme="@style/AppBaseTheme"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+        <activity android:name=".evaluate.activity.MyEvaluateAndAnswerActivity">
+        </activity>
+        <activity
+            android:name=".evaluate.activity.MyCollectionActivity"
+            android:theme="@style/AppBaseTheme">
+        </activity>
+
+        <!-- 特惠洗车首页页面 -->
+        <activity android:name=".carWash.view.CarWashAct">
+        </activity>
+        <!-- 特惠汽车搜索 -->
+        <activity android:name=".carWash.view.CarWashSearchAct"/>
+        <!-- 特惠结果界面搜索 -->
+        <activity android:name=".carWash.view.CarWashSearchResultAct"/>
+        <!-- 确认订单 -->
+        <activity android:name=".carWash.view.DetermineOrderAct"/>
+        <!-- 收银台 -->
+        <activity android:name=".carWash.view.CashierAct"/>
+
+        <!-- 门店详情 -->
+        <activity android:name=".store.StoreDetailsAct">
+        </activity>
+
+        <!-- 技师详情 -->
+        <activity android:name=".technician.view.TechnicianDetailsAct"/>
+        <!-- Ta的回答 -->
+        <activity android:name=".technician.view.ItsAnswerAct"/>
+
+        <!-- 车主评价 -->
+        <activity android:name=".owner.view.OwnerEvaluationAct"/>
+
+        <!-- 评价门店 -->
+        <activity android:name=".ownerEvaluation.view.EvaluateStoreAct"/>
+
+        <!-- 全部分类 -->
+        <activity android:name=".classification.view.AllClassificationAct">
+        </activity>
+        <!-- 收货地址 -->
+        <activity android:name=".address.ReceiptAddressAct"/>
+        <!-- 洗车卡 -->
+        <activity android:name=".carWash.view.CarWashCardAct"/>
+
+        <!-- 添加 -->
+        <activity android:name=".cardbag.view.oilcard.AddOilCardAct"/>
+        <!-- 充值明细 -->
+        <activity android:name=".cardbag.view.oilcard.OilRechargeDetailsAct">
+
+        </activity>
+        <!-- 未到账明细 -->
+        <activity android:name=".cardbag.view.oilcard.OilCardNotAlreadyAct"/>
+        <!-- 编辑地址 -->
+        <activity android:name=".address.EditAddressAct"/>
+        <!-- 我的爱车 -->
+        <activity
+            android:name=".car.view.MyCarActivity"
+            android:launchMode="singleTop">
+        </activity>
+        <!-- 全部品牌 -->
+        <activity android:name=".classification.view.AllBrandAct"/>
+        <!-- 品牌 -->
+        <activity android:name=".classification.view.BrandDetailsAct"/>
+        <activity android:name=".technician.view.AskHimQuestionsAct"/>
+        <activity android:name=".car.SelectCarTypeAct"/>
+        <activity android:name=".car.view.AddCarSuccessAct"/>
+        <activity android:name=".owner.view.EvaluateStoreAct"/>
+        <!-- web界面 -->
+        <activity
+            android:name=".html5show.view.HtmlAct"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan"/>
+        <!-- 裁剪图片 -->
+        <activity android:name="com.soundcloud.android.crop.CropImageActivity"/>
+        <!-- 意见反馈的界面 -->
+        <activity android:name=".feedback.view.FeedBackAct">
+        </activity>
+        <!-- bannner图 -->
+        <activity android:name=".bannerdetial.view.BannerDetialAct">
+        </activity>
+        <activity android:name=".addoil.view.AddOilPayAct">
+        </activity>
+        <activity android:name=".classification.view.ShopSearchAct">
+        </activity>
+        <activity android:name=".carWash.view.CarWashPayAct">
+        </activity>
+        <activity android:name=".order.activity.OrderSeeLagerImgActivity">
+        </activity>
+        <!-- 系统下载器的广播 -->
+        <receiver android:name=".main.DownLoadBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE"/>
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".address.DistributionShopAct"/>
+        <!-- 导航 -->
+        <activity android:name=".store.NaviActivity"/>
+        <activity android:name=".addoil.view.AddOilPayResultAct">
+        </activity>
+        <activity android:name=".order.activity.PaySuccessActivity">
+        </activity>
+        <activity android:name=".carWash.view.NewCarWashSearchAct"/>
+        <activity android:name=".seckill.view.SecKillAct">
+        </activity>
+        <activity android:name=".order.activity.UseCouponActivity">
+        </activity>
+        <!-- 違章首页 -->
+        <activity android:name=".illegal.Activity.IllegalHomeAct">
+        </activity>
+        <!-- 确认支付 -->
+        <activity android:name=".illegal.Activity.IllageSurePayAct">
+        </activity>
+        <!-- 违章查看 -->
+        <!-- 兑换码 -->
+        <activity android:name=".illegal.see.view.RedeemCodeAct"/>
+        <!-- 赠送兑换码 -->
+        <activity android:name=".illegal.see.view.IllegalRedeemCodeAct"/>
+        <!-- 使用记录 -->
+        <activity android:name=".illegal.see.view.UsageRecordAct"/>
+        <!-- 使用详情 -->
+        <activity android:name=".illegal.see.view.UsageDetailsAct"/>
+        <activity android:name=".car.view.SettingCarTypeAct"/>
+        <activity android:name=".illegal.Activity.ConfirmUseActivity">
+        </activity>
+        <activity android:name=".illegal.Activity.CommitSuccessActivity"/>
+        <activity
+            android:name=".illegal.Activity.IllegalBindCardActivity"
+            android:theme="@style/AppBaseTheme">
+        </activity>
+        <!-- 加油卡优惠 -->
+        <activity android:name=".addoil.view.UseCouponAct">
+        </activity>
+
+        <service
+            android:name=".app.ShowDialogService"
+            android:enabled="true"
+            android:exported="true">
+        </service>
+
+        <activity
+            android:name=".view.dialog.PromotionDialogAct"
+            android:theme="@style/translucent">
+
+        </activity>
+    </application>
+
+</manifest>

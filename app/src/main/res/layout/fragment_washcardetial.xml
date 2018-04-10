@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <RadioGroup
+        android:id="@+id/rg_washcarddetial"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:background="@color/divColor"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/txt_washcarddetial_all"
+            android:layout_width="54dp"
+            android:layout_height="23dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@id/txt_happybeans_sort"
+            android:background="@drawable/selector_bg_hannpebean"
+            android:button="@null"
+            android:gravity="center"
+            android:text="全部"
+            android:textColor="@drawable/selector_txt_happybeans"
+            android:textSize="13sp"/>
+
+        <RadioButton
+            android:id="@+id/txt_washcarddetial_get"
+            android:layout_width="54dp"
+            android:layout_height="23dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@id/txt_happybeans_all"
+            android:background="@drawable/selector_bg_hannpebean"
+            android:button="@null"
+            android:gravity="center"
+            android:text="充值"
+            android:textColor="@drawable/selector_txt_happybeans"
+            android:textSize="13sp"/>
+
+        <RadioButton
+            android:id="@+id/txt_washcarddetial_set"
+            android:layout_width="54dp"
+            android:layout_height="23dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@id/txt_happybeans_get"
+            android:background="@drawable/selector_bg_hannpebean"
+            android:button="@null"
+            android:gravity="center"
+            android:text="消费"
+            android:textColor="@drawable/selector_txt_happybeans"
+            android:textSize="13sp"/>
+
+    </RadioGroup>
+
+    <com.xi6666.view.EmptyLayout
+        android:id="@+id/el_washcarddetial"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.xi6666.view.superrecyclerview.XRecyclerView
+            android:id="@+id/xrel_washcarddetial"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </com.xi6666.view.EmptyLayout>
+
+
+</LinearLayout>

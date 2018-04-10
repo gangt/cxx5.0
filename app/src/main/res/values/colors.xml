@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#14cc70</color>
+    <!--主题颜色-->
+    <color name="themeColor">#13ce78</color>
+    <!--主页toolbar颜色-->
+    <color name="homeToolBarColor">#ffffffff</color>
+    <!--主页地址字体的颜色-->
+    <color name="homeAddressTxtColor">#626262</color>
+    <!--首页功能区的背景颜色-->
+    <color name="bgHomeFunction">#dce0df</color>
+    <!--我的界面我的订单标题-->
+    <color name="txtMineOrderTitle">#121212</color>
+    <!--我的界面我的订单字体-->
+    <color name="txtMineOrderDefault">#626262</color>
+    <!--我的界面隔断的颜色-->
+    <color name="txtMineDiv">#dce0df</color>
+    <!--分割线颜色-->
+    <color name="divColor">#dce0df</color>
+    <!--个人资料手机号码的颜色-->
+    <color name="txtPhoneNum">#b2b2b2</color>
+    <!--设置界面版本号字体的颜色-->
+    <color name="txtSettingVersion">#929292</color>
+    <!--设置界面退出字体-->
+    <color name="txxtSettingSingout">#f53825</color>
+    <!--喜豆界面排序按钮颜色-->
+    <color name="bgHappyBeans">#14cc70</color>
+    <!--加油标题的文字颜色-->
+    <color name="addOilTitle">#313131</color>
+    <!--加油界面浅灰色字体-->
+    <color name="addOillight">#959595</color>
+    <!--加油节省红色字体-->
+    <color name="addOilSave">#ff5764</color>
+    <!--登录界面title的字体颜色-->
+    <color name="loginTitle">#0c7a43</color>
+    <!--登录界面登录按钮的字体颜色-->
+    <color name="loginBtnColor">#14cc70</color>
+    <!--登录界面平台服务热线字体颜色-->
+    <color name="phoneServer">#80ffffff</color>
+    <!--首页商品流的旧价格-->
+    <color name="txthomeGoodsOld">#c2c2c2</color>
+
+
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="gray">#e2e2e2</color>
+    <color name="text_gray">#626262</color>
+    <color name="text_green">#14cc70</color>
+    <color name="text_black">#121212</color>
+    <color name="text_red">#f53825</color>
+    <color name="text_orange">#ff7f00</color>
+    <color name="text_orange1">#f7bf47</color>
+    <color name="text_delete_color">#FF5D5D</color>
+
+
+    <color name="whiteTextColor">#FFFFFF</color>
+    <color name="alphaWhiteTextColor">#66FFFFFF</color>
+    <color name="blueColor">#40b2fb</color>
+
+    <color name="mis_actionbar_color">#21282C</color>
+
+    <color name="black_text">#121212</color>
+    <color name="gray_text">#626262</color>
+    <color name="light_gray_text">#929292</color>
+    <color name="red_text">#f53825</color>
+    <color name="alpha_red_text">#80f53825</color>
+    <!--下架背景颜色-->
+    <color name="offlineColor">#fffabc</color>
+
+
+    <!--半透明的颜色-->
+    <color name="transparentGray">#99000000</color>
+
+    <color name="orange">#ff8f2c</color>
+
+    <!--覆盖颜色-->
+    <color name="bgColor_overlay">#60000000</color>
+    <!--窗口背景颜色-->
+    <color name="bgColor_alertview_alert">#f8f8f8</color>
+    <color name="bgColor_alertview_alert_start">#f0f0f0</color>
+    <!--标题颜色-->
+    <color name="textColor_alert_title">#000000</color>
+    <color name="textColor_actionsheet_title">#8f8f8f</color>
+    <!--消息颜色-->
+    <color name="textColor_alert_msg">#000000</color>
+    <color name="textColor_actionsheet_msg">#8f8f8f</color>
+    <!--线条颜色-->
+    <color name="bgColor_divier">#d7d7db</color>
+    <!--取消按钮颜色-->
+    <color name="textColor_alert_button_cancel">#007aff</color>
+    <!--高亮按钮颜色-->
+    <color name="textColor_alert_button_destructive">#ff3b30</color>
+    <!--普通按钮文字颜色-->
+    <color name="textColor_alert_button_others">#007aff</color>
+    <!--点击颜色-->
+    <color name="bgColor_alert_button_press">#EAEAEA</color>
+    <!--actionsheet模式的取消按钮背景颜色-->
+    <color name="bgColor_actionsheet_cancel_nor">#ffffff</color>
+    <color name="translucent_background">#60000000</color>
+
+</resources>

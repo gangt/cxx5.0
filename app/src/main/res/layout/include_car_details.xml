@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- this is car details-->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/whiteTextColor"
+    android:layout_height="60dp">
+
+    <!-- 头像 -->
+    <ImageView
+        android:id="@+id/add_car_image"
+        android:layout_marginLeft="21dp"
+        android:layout_centerVertical="true"
+        android:scaleType="fitXY"
+        android:layout_width="53dp"
+        android:layout_height="40dp" />
+
+    <TextView
+        android:id="@+id/add_car_title"
+        android:layout_toRightOf="@+id/add_car_image"
+        android:layout_width="wrap_content"
+        android:ellipsize="end"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="10dp"
+        android:maxWidth="220dp"
+        android:text=""
+        android:lines="1"
+        android:layout_marginRight="12dp"
+        android:textStyle="bold"
+        android:textColor="#313131"/>
+
+    <!--  认证 -->
+    <ImageView
+        android:id="@+id/add_car_success"
+        android:layout_toRightOf="@+id/add_car_title"
+        android:layout_alignTop="@+id/add_car_title"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_add_car_success"/>
+
+
+    <TextView
+        android:id="@+id/add_car_type"
+        android:layout_below="@+id/add_car_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text=""
+        android:layout_marginTop="9dp"
+        android:layout_alignLeft="@+id/add_car_title"/>
+
+
+    <RadioButton
+        android:id="@+id/add_car_rb"
+        android:layout_width="25dp"
+        android:padding="5dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="17dp"
+        android:button="@null"
+        android:drawableLeft="@drawable/ic_car_wars"/>
+</RelativeLayout>
